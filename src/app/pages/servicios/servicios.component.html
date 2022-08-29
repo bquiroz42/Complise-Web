@@ -1,0 +1,64 @@
+<!-- SECCION SERVICIOS -->
+
+<h2 class="title-services text-center">Servicios</h2>
+<hr style="width: 10%; margin-left: 45%;"/>
+
+<div class="card-group mb-5 container">
+  <!-- <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img1.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="title-product">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+  <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img2.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+  <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img3.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+</div> -->
+
+  <div *ngFor="let itemServicio of serviciosArray" class="card" (click)="verServicio(itemServicio.id)">
+    <img [src]="itemServicio.imagen" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="title-product">{{ itemServicio.nombre }}</h5>
+      <p class="card-text">{{ itemServicio.descripcion }}</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- <div class="card-group mb-5 container">
+  <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img5.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="title-product">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+  <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img6.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+  <div class="card" routerLink="/servicios">
+    <img src="assets/imagenes/img4.jpg" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Med2k</h5>
+      <p class="card-text">Sistema de gestion para control y administracion de hospital</p>
+    </div>
+  </div>
+</div> -->
+
+<app-footer></app-footer>

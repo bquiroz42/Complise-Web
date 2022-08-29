@@ -1,0 +1,14 @@
+<!-- <div class="container" *ngFor="let item of serviciosArray">
+<h2>{{ item.nombre }}</h2>
+<h2>{{ item.descripcion}}</h2>
+<h2>{{ item.imagen }}</h2>
+
+</div> -->
+<div class="m-3">
+<h2 class="">{{nombre}}</h2>
+<p class="card-text" style="width: 50%; text-align: justify;">{{descripcion}}</p>
+<img [src]="imagen" class="img-thumbnail img-fluid img-service">
+
+</div>
+
+<button class="btn btn-success m-3">Solicitar servicio</button>

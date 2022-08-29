@@ -1,0 +1,34 @@
+.title-product{
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+.img-about{
+    width: 100%;
+    height: auto;
+}
+
+.list-item-group{
+    list-style: none;
+}
+
+.container-fluid{
+    padding-left: 05%;
+    padding-right: 05%;
+
+}
+
+
+.container-bg-gray{
+    background: rgba(200,200,200,0.3);
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.img-team{
+    height: auto;
+    width: 80vh
+}

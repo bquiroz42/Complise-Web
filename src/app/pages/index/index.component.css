@@ -1,0 +1,273 @@
+.carousel-caption{
+margin-bottom: 10%;
+}
+
+/* CONTAINER DIVS */
+.container-contact-search{
+    display: flex;
+    padding-top: 1%;
+}
+.container-contact-search a{
+    text-decoration: none;
+    color: black;
+    transition: all linear 0.5s;
+}
+.container-contact-search a:hover{
+    color: blue;
+}
+
+.menu-container{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container-logo{
+margin-left: 5%;
+}
+.container-info{
+margin-left: 50%;
+}
+
+/*INFORMATION CONTACT */
+.icon-contact{
+    width: 20px;
+}
+.phone-number{
+    font-family: 'Roboto';
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.searchbar{
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+.icon-facebook{
+    padding-right: 5px;
+    width: 30px;
+}
+
+/* IMAGE LOGO COMPLISE */
+.image-logo{
+width: 70%;
+}
+/* NAVBAR MENU */
+.list-group-menu{
+    list-style: none;
+    margin-left: 80%;
+}
+.list-item-menu{
+    font-family: 'Raleway';
+    display: inline;
+}
+.list-item-menu a{
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+    line-height: 20px;
+    padding-right: 3%;
+}
+
+/* CAROUSEL */
+.title-info-carousel{
+    color: white;
+}
+.text-info-carousel{
+    color: white;
+    font-size: 40px;
+}
+
+.image-responsive-bg{
+    width: 100%;
+    height: 85vh;
+}
+
+/* TITLE SECTION */
+
+.title-services{
+    font-size: 40px;
+    /* font-family: 'Raleway'; */
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* PROMOCIONES SECTION */
+
+.container-section{
+    background: rgba(104, 104, 104, 0.31);
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5%;
+}
+
+.container-card{
+    display: flex;
+    background: white;
+    width: 25%;
+    height: 200px;
+    margin: 2%;
+    border-radius: 10px
+}
+
+/*  CARDS */
+
+.title-product{
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 250px;
+}
+
+.card{
+    border-color: white;
+    transition: all linear 0.3s;
+}
+
+.card:hover{
+    border-color: rgba(60,60,60,0.3);
+    background: rgba(60,60,60,0.2);
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    cursor:pointer
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.card-title{
+    text-align: center;
+    font-family: 'Arial';
+}
+
+.card-img-promo{
+    width: 100%;
+    height: 300px;
+}
+
+/* SECTION CONTACT */
+
+.container-contact{
+    width: 100%;
+    background: rgba(200,200,200,0.4);
+    height: auto;
+}
+
+/* MOBILE DEVICES */
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+    .menu-container{
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .container-logo{
+    margin-left: 1%;
+    }
+    .container-info{
+    margin-left: 1%;
+    }
+
+    .searchbar{
+        width: 30%; 
+    }
+
+    .list-group-menu{
+        list-style: none;
+        margin-left: 30%;
+    }
+
+    .image-responsive-bg{
+        height: 50vh;
+    }
+
+    .carousel-cation{
+        margin-bottom: 20%;
+    }
+
+}
+/* IPADS - TABLETS */
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    .image-logo{
+        width: 100%;
+    }
+
+    .menu-container{
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .container-logo{
+    margin-left: 1%;
+    }
+    .container-info{
+    margin-left: 25%;
+    }
+
+    .searchbar{
+        width: 30%; 
+    }
+
+    .list-group-menu{
+        list-style: none;
+        margin-left:50%;
+    }
+
+    .image-responsive-bg{
+        height: 50vh;
+    }
+}
+/* SMALL SCREENS , LAPTOPS */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    .menu-container{
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .container-logo{
+    margin-left: 1%;
+    }
+    .container-info{
+    margin-left: 30%;
+    }
+
+    .searchbar{
+        width: 50%; 
+    }
+
+    .list-group-menu{
+        list-style: none;
+        margin-left: 65%;
+    }
+
+    .image-responsive-bg{
+        height: 50vh;
+    }
+}
+/* DEKTOPS, LARGE SCREENS */
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .image-responsive-bg{
+        height: 50vh;
+    }
+}
+/* EXTRA LARGE SCREENS */
+@media screen and (min-width: 1201x){
+    .image-responsive-bg{
+        height: 50vh;
+    }
+}
+
+
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */

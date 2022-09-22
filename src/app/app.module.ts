@@ -12,6 +12,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { VerServicioComponent } from './pages/ver-servicio/ver-servicio.component';
 import { VerProductoComponent } from './pages/ver-producto/ver-producto.component';
 import { MapComponent } from './component/map/map.component';
+import { ContactComponent } from './component/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MapComponent } from './component/map/map.component';
     FooterComponent,
     VerServicioComponent,
     VerProductoComponent,
-    MapComponent
+    MapComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,13 @@
 .container-footer{
-    background: #444444; bottom: 0; padding: 1px 0;
+    background: #444444;
+    bottom: 0;
+    padding: 0.5em 0;
+    position: absolute;
+    width: 100%;
+}
+
+.body{
+    position: relative;
+    min-height: 100vh;
+
 }

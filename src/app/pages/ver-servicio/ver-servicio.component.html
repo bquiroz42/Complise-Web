@@ -4,11 +4,40 @@
 <h2>{{ item.imagen }}</h2>
 
 </div> -->
+
+<div class="row">
+
+    <div class="container-menu-logo">
+    <img class="image-logo" [src]="imagenLogo" />
+    </div>
+    
+    <div class="container-menu-options">
+      <div class="container-info">
+        <a href="https://web.whatsapp.com/%F0%9F%8C%90/es">
+          <i class="fa fa-phone "></i>
+          <span class="phone-number">81 8347 2525</span>
+        </a>
+        <input class="searchbar text-center" placeholder="Buscar"/>
+        <i class="fa fa-search margin-icon"></i>
+        <a href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
+        </a>
+       </div>
+    </div>
+  
+  </div>
+
 <div class="m-3">
-<h2 class="">{{nombre}}</h2>
-<p class="card-text" style="width: 50%; text-align: justify;">{{descripcion}}</p>
+<h2 class="text-title">{{ nombre }}</h2>
+<p class="text-description">{{descripcion}}</p>
 <img [src]="imagen" class="img-thumbnail img-fluid img-service">
 
 </div>
 
 <button class="btn btn-success m-3">Solicitar servicio</button>
+
+<div class="container-img">
+    <img src="/assets/imagenes/ventaEquipos.jpg" class="img-service1" />
+    <div class="capa-imagen">
+    </div>
+</div>

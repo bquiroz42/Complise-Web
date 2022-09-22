@@ -45,6 +45,8 @@ export class VerServicioComponent implements OnInit {
 
   paramsId: any;
 
+  imagenLogo
+
   ngOnInit(): void {
 
     this.activatedRoute.params.subscribe((params) => {

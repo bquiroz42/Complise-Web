@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+
   selector: 'app-nosotros',
   templateUrl: './nosotros.component.html',
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-
   listCheck = [
     {text: 'Análisis y diseño de sistemas'},
     {text: 'Instalación y configuración de equipos'},
-    {text: 'Comunicaciones'},
+    {text: 'Instalacion y configuracion de telefonia'},
     {text: 'Redes locales y amplias'},
     {text: 'Diseño gráfico publicitario'},
-    {text: 'Asesoría y capacitación'},
-    {text: 'Internet é Intranets'},
     {text: 'Configuración de estaciones'},
     {text: 'Configuración de servidores'}, 
   ]
@@ -30,3 +28,28 @@ export class NosotrosComponent implements OnInit {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+{text: 'Análisis y diseño de sistemas'},
+    {text: 'Instalación y configuración de equipos'},
+    {text: 'Comunicaciones'},
+    {text: 'Redes locales y amplias'},
+    {text: 'Diseño gráfico publicitario'},
+    {text: 'Asesoría y capacitación'},
+    {text: 'Internet é Intranets'},
+    {text: 'Configuración de estaciones'},
+    {text: 'Configuración de servidores'}, 
+*/

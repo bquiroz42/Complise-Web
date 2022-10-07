@@ -1,133 +1,127 @@
-.img-service{
-    width: 40%;
-    height: 50vh;
-}
-
 .text-title{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Raleway';
-}
-
-.text-description{
     font-size: 12px;
     font-family: 'Raleway';
 }
 
-.container-img{
-    position: relative;
+.card-text{
+    width: 100%;
+    font-family: 'Raleway';
+    text-align: justify;
 }
 
-.img-service1{
-    width: 300px;
-    height: 25vh;
+.img-service{
+    width: 100%;
+    height: auto
 }
 
-.capa-imagen{
-    background: rgba(0,0,0,0.5);
-    width: 300px;
-    height: 25vh;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: all linear 0.3s;
+.text-button{
+    font-size: 1rem;
 }
-
-.capa-imagen:hover{
-    opacity: 1;
-}
-
-
 
 @media screen and (min-width: 320px) and (max-width: 480px){
     .text-title{
-        font-size: 20px;
+        font-size: 1.5rem;
     }
-    .text-description{
-        text-align: justify;
-        color: blue;
-        font-size: 12px;
-     }
-     .img-service{
-        width: 100%;
+    .card-text{
+        font-size: 1.1rem;
+    }
+    .img-service{
         height: 30vh;
-     }
+    }
+    .text-button{
+        font-size: 1.2rem;
+    }
 }
 @media screen and (min-width: 481px) and (max-width: 768px){
+
     .text-title{
-        font-size: 25px;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
-    .text-description{
-        font-size: 20px;
-        color: red;
-        text-align: justify;
-        width: 90%;
+    .card-text{
+        font-size: 1.4rem;
+        width: 80%;
         margin: auto;
         display: block;
-        padding-left: 2%;
-        padding-right: 2%;
-     }
-     .img-service{
+        margin-bottom: 2%;
+    }
+
+    .img-service{
         width: 80%;
-        height: 35vh;
-        margin:auto;
+        margin: auto;
         display: block;
-     }
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px){
     .text-title{
-        text-align: center;
-        font-size: 30px;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
-    .text-description{
-        color: green;
-        width: 100%;
-        font-size: 25px;
-        text-align: justify;
-        padding: 5%;
-     }
-     .img-service{
-        width: 90%;
-        height: 40vh;
-        margin:auto;
+    .card-text{
+        font-size: 1.4rem;
+        width: 80%;
+        margin: auto;
         display: block;
-     }
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
 }
 @media screen and (min-width: 1025px) and (max-width: 1200px){
     .text-title{
-        text-align: none;
-        font-size: 30px;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
-    .text-description{
-        color: green;
-        width: 100%;
-        font-size: 25px;
-        text-align: justify;
-        padding: 5%;
-     }
-     .img-service{
-        width: 90%;
-        height: 40vh;
-        margin:auto;
+    .card-text{
+        font-size: 1rem;
+        width: 80%;
+        margin: auto;
         display: block;
-     }
-     
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
 }
 @media screen and (min-width: 1201px){
     .text-title{
-        text-align: start;
-        font-size: 30px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
     }
-    .text-description{
-        width: 90%;
-        font-size: 20px;
-        text-align: justify;
-        color: purple;
-     }
+    .card-text{
+        font-size: 1rem;
+        width: 70%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2%;
+    }
 
-     .img-service{
-        width: 50%;
+    .img-service{
+        width: 35%;
+        margin: auto;
+        display: block;
         height: 50vh;
-     }
-
+    }
+    .text-button{
+        font-size: 1rem;
+    }
 }

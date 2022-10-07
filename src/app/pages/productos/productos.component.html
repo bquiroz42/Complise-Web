@@ -1,13 +1,13 @@
+<div class="animate__animated animate__fadeIn">
+
 <!-- SECCION PRODUCTOS -->
 
 <h2 class="title-services text-center">Productos</h2>
 <hr style="width: 10%; margin-left: 45%;"/>
 
-<div class="card-group mb-5 container">
-
   <div class="card-group mb-5 container">
 
-    <div *ngFor="let itemProducto of productosArray" class="card" (click)="verProducto(itemProducto.id)">
+    <div *ngFor="let itemProducto of productosArray" class="card animate__animated animate__backInDown" (click)="verProducto(itemProducto.id)">
     <img [src]="itemProducto.imagen" class="card-img-top p-2" alt="...">
     <div class="card-body">
       <h5 class="title-product">{{ itemProducto.nombre }}</h5>
@@ -17,6 +17,7 @@
   
   </div>
 
+<app-footer></app-footer>
+
 </div>
 
-<app-footer></app-footer>

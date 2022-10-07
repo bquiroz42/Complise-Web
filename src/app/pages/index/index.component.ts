@@ -39,26 +39,30 @@ export class IndexComponent implements OnInit {
   ]*/
 
   serviciosArray = [
-    { nombre: 'Desarrollo de Software a la medida', descripcion: 'Desarrollo de programas que facilitaran tu dia a dia solucionando tus problemas y necesidades.', imagen: 'assets/imagenes/img12.jpg' , id: 1 },
-    { nombre: 'Reparación de equipo', descripcion: 'Reparacion de computadores, laptops, impresoras, etc.', imagen: 'assets/imagenes/img2.jpg' , id: 2 },
-    { nombre: 'Soporte Técnico', descripcion: 'Soporte técnico calificado para ayudarte a resolver algún problema.', imagen: 'assets/imagenes/img13.jpg' , id: 3 },
+    { nombre: 'Desarrollo de Software a la medida', descripcion: 'Desarrollo de sistemas con soluciones para empresas y clientes.', imagen: 'assets/imgclientes/DESARROLLO.png' , animacion: 'floating', id: 1 },
+    { nombre: 'Reparación de equipo', descripcion: 'Reparacion de Equipo de Computo y otros aparatos electronicos.', imagen: 'assets/imgclientes/REDES.png' , animacion: 'floating2' , id: 2 },
+    { nombre: 'Soporte Técnico', descripcion: 'Soporte técnico calificado para ayudarte a resolver algún problema.', imagen: 'assets/imgclientes/SOPORTE.png' , animacion: 'floating3', id: 3 },
   ]
   
   productosArray = [
-    { nombre: 'Med2k', descripcion: 'Sistema de gestion para control y administracion para Hospitales', imagen: 'assets/imagenes/med2k.png' , id: 1 },
+    { nombre: 'Med2k', descripcion: 'Sistema para control de Hospitales', imagen: 'assets/imagenes/med2k.png' , id: 1 },
     { nombre: 'Sia2k', descripcion: 'Sistema de control de inventario', imagen: 'assets/imagenes/ventaEquipos.jpg', id: 2 },
     { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios', imagen: 'assets/imagenes/lab2k.jpg', id: 3 },
   ]
 
   clienteArray = [
-    {imagen: 'assets/imgclientes/caritas.png', id: 1},
-    {imagen: 'assets/imgclientes/iech.jpg', id: 2},
-    {imagen: 'assets/imgclientes/zambrano.png', id: 3}, 
-    {imagen: 'assets/imgclientes/moreira.png', id: 4},
-    {imagen: 'assets/imgclientes/cem.png', id: 5},
-    {imagen: 'assets/imgclientes/delta.jpg', id: 2},
-    {imagen: 'assets/imgclientes/gineco.png', id: 3}, 
-    {imagen: 'assets/imgclientes/maxicargas.jpg', id: 4},
+    {imagen: 'assets/imgclientes/artrolab.png', id: 1},
+    {imagen: 'assets/imgclientes/caritas.png', id: 2},
+    {imagen: 'assets/imgclientes/cem.png', id: 3}, 
+    {imagen: 'assets/imgclientes/creasis.png', id: 4},
+    {imagen: 'assets/imgclientes/delta.png', id: 5},
+    {imagen: 'assets/imgclientes/fertilita.png', id: 6},
+    {imagen: 'assets/imgclientes/gineco.png', id: 7}, 
+    {imagen: 'assets/imgclientes/iech.png', id: 8},
+    {imagen: 'assets/imgclientes/maxicargas.png', id: 9},
+    {imagen: 'assets/imgclientes/moreira.png', id: 10},
+    {imagen: 'assets/imgclientes/tauro.png', id: 11},
+    {imagen: 'assets/imgclientes/uanl.png', id: 12},
   ]
 
   cambiarImagen = "assets/imagenes/bg_bits.gif"; 

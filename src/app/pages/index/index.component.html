@@ -28,7 +28,7 @@
   
   <div class="container-menu-options">
     <div class="container-info">
-      <a href="https://web.whatsapp.com/%F0%9F%8C%90/es">
+      <a href="https://wa.me/528183472525">
         <i class="fa fa-phone "></i>
         <span class="phone-number">81 8347 2525</span>
       </a>
@@ -42,8 +42,6 @@
 
 </div>
 
-
-
 <!-- NAVBAR MENU -->
 <div class="menu-colapse menu-container">
 
@@ -54,7 +52,6 @@
   <div class="container-icon-menu">
     <i class="fa fa-bars ocultarIcono" (click)="activarMenu()"></i>
   </div>
-
   
   <div *ngIf="mostrarMenu === true" class="capa-fondo animate__animated animate__fadeIn sticky">
     <div class="panel-lateral-menu">
@@ -79,7 +76,6 @@
     </ul>
   </div>
   
-
 </div>
 
 <!-- CAROUSEL IMAGES -->
@@ -93,18 +89,18 @@
     <div class="carousel-inner">
      <div class="carousel-item active" data-bs-interval="5000">
         <img [src]="bgImg1" class="d-block image-responsive-bg" alt="imagenSistemas">
-        <div class="carousel-caption d-none d-md-block"> 
+        <div class="carousel-caption d-none d-md-block floating2"> 
           <h2 class="title-carousel animate__animated animate__fadeInUp">Desarrollo de aplicaciones a tu medida</h2>
           <p class="text-carousel animate__animated animate__fadeInUp">Creamos soluciones electronicas para tu negocio en base a tus necesidades</p>
         </div>
-        <div class="carousel-caption-mobile">
+        <div class="carousel-caption-mobile floating2">
           <p class="title-carousel-mobile animate__animated animate__fadeInUp">Desarollo de aplicaciones a tu medida</p>
           <p class="text-carousel-mobile animate__animated animate__fadeInUp">Creamos soluciones electronicas para tu negocio en base a tus necesidades</p>
         </div>
       </div>
       <div class="carousel-item" data-bs-interval="5000">
         <img [src]="bgImg2" class="d-block image-responsive-bg" alt="imagenSoporte">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block floating2">
           <h2 class="title-carousel animate__animated animate__fadeInUp">Soporte técnico</h2>
           <p class="text-carousel animate__animated animate__fadeInUp">Contamos con servicio de asesoría, reparación de computo e infraestructura</p>
         </div>
@@ -112,11 +108,10 @@
           <p class="title-carousel-mobile animate__animated animae__fadeInUp">Soporte técnico</p>
           <p class="text-carousel-mobile animate__animated animae__fadeInUp">Contamos con servicio de asesoría, reparación de computo e infraestructura</p>
         </div>
-
       </div>
       <div class="carousel-item" data-bs-interval="5000">
         <img [src]="bgImg3" class="d-block image-responsive-bg" alt="imagenVentas">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block floating2">
           <h2 class="title-carousel animate__animated animate__fadeInUp ">Venta de equipo de computo</h2>
           <p class="text-carousel animate__animated animate__fadeInUp">Contamos con el equipo y accesorios que tu necesitas</p>
         </div>
@@ -146,7 +141,7 @@
 
 <!-- SECCION SERVICIOS -->
 
-<h2 class="title-services m-2">Servicios</h2>
+<h2 class="title-color m-2">Servicios</h2>
 <hr class="line-title"/>
 
 <div class="card-group mb-5 container">
@@ -154,7 +149,9 @@
   <div *ngFor="let itemServicio of serviciosArray" class="card" (click)="verServicio(itemServicio.id)">
 
     <div style="display: relative">
-      <img [src]="itemServicio.imagen" class="card-img-top p-2" alt="...">
+      <div [ngClass]="itemServicio.animacion">
+        <img [src]="itemServicio.imagen" class="card-img-top p-2" alt="...">
+      </div>
       <div class="card-body">
         <h5 class="title-product">{{ itemServicio.nombre }}</h5>
         <p class="card-text text-center">{{ itemServicio.descripcion }}</p>
@@ -169,12 +166,12 @@
 
 <!-- SECCION PRODUCTOS -->
 
-<h2 class="title-services m-2">Productos</h2>
+<h2 class="title-color m-2">PRODUCTOS</h2>
 <hr class="line-title"/>
 
 <div class="card-group mb-5 container">
 
-  <div *ngFor="let itemProducto of productosArray" class="card" (click)="verProducto(itemProducto.id)">
+  <!-- <div *ngFor="let itemProducto of productosArray" class="card" (click)="verProducto(itemProducto.id)">
   <div style="display: relative;">
     <img [src]="itemProducto.imagen" class="card-img-top p-2" alt="...">
     <div class="card-body">
@@ -183,35 +180,44 @@
     </div>
     <div class="capahover"></div>
   </div>
+</div> -->
+
+<div class="col-sm-3 col-md-4 col-lg-4 col-xl-4 mx-auto d-block" style="" *ngFor="let itemProducto of productosArray" (click)="verProducto(itemProducto.id)">
+  <div class="main-card">
+    <img [src]="itemProducto.imagen" class="imagen-service img-thumbnail">
+
+    <div class="container-info-product">
+      <p class="title-information text-center">{{ itemProducto.nombre }}</p>
+      <p class="text-information">{{ itemProducto.descripcion }}</p>
+    </div>
+  </div>
 </div>
 
 </div>
 
 <!-- SECCION NUESTROS CLIENTES -->
 
-<h2 class="title-services">Nuestros Clientes</h2>
+<h2 class="title-color">NUESTROS CLIENTES</h2>
 <hr class="line-title"/>
 
 <div class="row container-fluid">
-  <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3" *ngFor="let itemCliente of clienteArray">
+  <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3" *ngFor="let itemCliente of clienteArray">
     <img [src]="itemCliente.imagen" class="img-fluid mx-auto d-block img-cliente">
   </div>
 </div>
 
 <!-- CONTACTO -->
 
-<div class="container-contact pb-4">
-
-<h2 class="title-services pt-3">Contactanos</h2>
+<div class="container-contact">
+<!-- <h2 class="title-services pt-3">Contactanos</h2> -->
+<span class="title-color">CONTACTANOS</span>
 <hr class="line-title"/>
-
 <app-contact></app-contact>
-
 </div>
 
 <!-- SECCION UBICACION -->
 
-<!-- <app-map></app-map> -->
+<app-map></app-map>
 
 <!-- FOOTER -->
 <footer class="">

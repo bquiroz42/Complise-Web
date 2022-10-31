@@ -10,9 +10,9 @@ export class VerProductoComponent implements OnInit {
 
 // ARRAY TEMPORALMENTE CREADO PARA MOSTRAR LOS PRODUCTOS
   productosArray = [
-    { nombre: 'Med2k', descripcion: 'Sistema encargado de manejar y administrar las areas de tu hospital/consultorio con el que podrás areas especializadas como recepción, enfermeria, archivo, etc. Adaptable con el sistema Sia2k para un manejo más completo del sistema', imagen: 'assets/imagenes/med2k.png' , id: 1 },
-    { nombre: 'Sia2k', descripcion: 'Sistema para control de inventario, utilizado comunmente en almacenes para manejar entradas y salidas. Adaptable con el sistema Med2k para un manejo más completo del sistema.', imagen: 'assets/imagenes/ventaEquipos.jpg', id: 2 },
-    { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios con el que podrás realizar tus estudios y manejar las pruebas de tus pacientes.', imagen: 'assets/imagenes/lab2k.jpg', id: 3 },
+    { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios con el que podrás realizar tus estudios y manejar las pruebas de tus pacientes.', imagen: 'assets/imagenes/secciones/lab2k.jpg', id: 1 },
+    { nombre: 'Med2k', descripcion: 'Sistema encargado de manejar y administrar las areas de tu hospital/consultorio con el que podrás areas especializadas como recepción, enfermeria, archivo, etc. Adaptable con el sistema Sia2k para un manejo más completo del sistema', imagen: 'assets/imagenes/secciones/med2k.jpg' , id: 2 },
+    { nombre: 'Sia2k', descripcion: 'Sistema para control de inventario, utilizado comunmente en almacenes para manejar entradas y salidas. Adaptable con el sistema Med2k para un manejo más completo del sistema.', imagen: 'assets/imagenes/secciones/sia2k.png', id: 3 },
   ]
 
   nombre: string;

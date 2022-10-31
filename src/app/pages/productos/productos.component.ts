@@ -10,9 +10,22 @@ export class ProductosComponent implements OnInit {
 
   // ARRAY TEMPORALMENTE CREADO PARA MOSTRAR LOS PRODUCTOS
   productosArray = [
-    { nombre: 'Med2k', descripcion: 'Sistema para control de Hospitales', imagen: 'assets/imagenes/med2k.png' , id: 1 },
-    { nombre: 'Sia2k', descripcion: 'Sistema de control de Inventario', imagen: 'assets/imagenes/ventaEquipos.jpg', id: 2 },
-    { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios', imagen: 'assets/imagenes/lab2k.jpg', id: 3 },
+    { nombre: 'Lab2k', descripcion: 'Sistema de Laboratorio', imagen: 'assets/imagenes/secciones/lab2k.jpg', id: 1 },
+    { nombre: 'Med2k', descripcion: 'Sistema de Expediente Electrónico', imagen: 'assets/imagenes/secciones/med2k.jpg' , id: 2 },
+    { nombre: 'Sia2k', descripcion: 'Sistema Integral Administrativo', imagen: 'assets/imagenes/secciones/sia2k.png', id: 3 },
+  ]
+
+  imagenLogo = 'assets/imagenes/logoComplise.png';
+  iconoTelefono = 'assets/imagenes/num-contacto 1.png';
+  iconoFacebook = 'assets/imagenes/icono-facebook 1.png';
+
+  mostrarMenu: boolean = false;
+
+  paginasArray =  [
+    { nombre: 'Servicios', ruta: '/servicios'},
+    { nombre: 'Productos', ruta: '/productos'},
+    { nombre: 'Nosotros', ruta: '/nosotros'},
+    { nombre: 'Contacto', ruta: '/contacto'}
   ]
 
   constructor(private router: Router) { }

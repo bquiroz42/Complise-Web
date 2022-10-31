@@ -14,6 +14,17 @@ export class ServiciosComponent implements OnInit {
     { nombre: 'Soporte Técnico', descripcion: 'Soporte técnico calificado para ayudarte a resolver algún problema.', imagen: 'assets/imagenes/soporteTecnico.jpg' , id: 3 },
   ]
 
+  paginasArray =  [
+    { nombre: 'Servicios', ruta: '/servicios'},
+    { nombre: 'Productos', ruta: '/productos'},
+    { nombre: 'Nosotros', ruta: '/nosotros'},
+    { nombre: 'Contacto', ruta: '/contacto'}
+  ]
+  
+  imagenLogo = 'assets/imagenes/logoComplise.png';
+  iconoTelefono = 'assets/imagenes/num-contacto 1.png';
+  iconoFacebook = 'assets/imagenes/icono-facebook 1.png';
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {

@@ -1,49 +1,62 @@
+<div class="animate__animated animate__fadeIn">
+
+
 <!-- CONTACT INFO -->
-<!-- <div class="container-contact-search">
-    
-  <div class="container-logo"> 
-    <img class="image-logo" [src]="imagenLogo"/> 
-  </div>
+
+<div class="container-top" id="containerTop">
   
-   <div class="container-info">
-    <a href="https://web.whatsapp.com/%F0%9F%8C%90/es">
+  <!-- <div class="container-information pt-2">
+    <a href="https://wa.me/528183472525">
       <i class="fa fa-phone "></i>
       <span class="phone-number">81 8347 2525</span>
     </a>
     <input class="searchbar text-center" placeholder="Buscar"/>
-    <i class="fa fa-search margin-icon"></i>
+    <i class="fa fa-search icon-position"></i>
     <a href="https://es-la.facebook.com/www.complise.mx">
       <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
     </a>
-   </div>
-</div>
+  </div> -->
 
--->
+  <div class="container-information pt-2" style="display: flex;">
+    
+    <div class="col-2">
+        <img class="imagen-logo" [src]="imagenLogo" id="logo" routerLink="/index" style="cursor: pointer" />
+    </div>
+    <div class="col-10">
 
-<div class="container-top">
+      <div class="col-10 position-options">
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="">
+          <i class="fa fa-envelope" style="color: black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://wa.me/528183472525">
+          <i class="fa fa-mobile" style="color:black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <input class="searchbar text-center" placeholder="Buscar" style="font-family: 'Roboto';"/>
+        <i class="fa fa-search icon-position"></i>
+      </div>
 
-  <div class="container-menu-logo-pc">
-   <img class="image-logo" [src]="imagenLogo" />
+      <div class="col-10">
+        <ul class="list-group-menu">
+          <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+            <a [routerLink]="pagina.ruta" class="ml-3 text-option-menu">
+              {{ pagina.nombre }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
   
-  <div class="container-menu-options">
-    <div class="container-info">
-      <a href="https://wa.me/528183472525">
-        <i class="fa fa-phone "></i>
-        <span class="phone-number">81 8347 2525</span>
-      </a>
-      <input class="searchbar text-center" placeholder="Buscar"/>
-      <i class="fa fa-search margin-icon"></i>
-      <a href="https://es-la.facebook.com/www.complise.mx">
-        <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
-      </a>
-     </div>
-  </div>
-
 </div>
 
+
 <!-- NAVBAR MENU -->
-<div class="menu-colapse menu-container">
+<!--<div class="menu-colapse menu-container">
 
   <div class="container-menu-logo-mobile">
     <img class="image-logo-mobile" [src]="imagenLogo" />
@@ -76,10 +89,10 @@
     </ul>
   </div>
   
-</div>
+</div>-->
 
 <!-- CAROUSEL IMAGES -->
-<div id="carousel" class="carousel carousel-white slide" data-bs-ride="carousel" style="z-index:1">
+<div id="carousel" class="carousel carousel-white slide mb-5" data-bs-ride="carousel" style="z-index:1">
 
     <div class="carousel-indicators" style="z-index: 2;">
       <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -112,11 +125,11 @@
       <div class="carousel-item" data-bs-interval="5000">
         <img [src]="bgImg3" class="d-block image-responsive-bg" alt="imagenVentas">
         <div class="carousel-caption d-none d-md-block floating2">
-          <h2 class="title-carousel animate__animated animate__fadeInUp ">Venta de equipo de computo</h2>
+          <h2 class="title-carousel animate__animated animate__fadeInUp">Venta de equipo de cómputo</h2>
           <p class="text-carousel animate__animated animate__fadeInUp">Contamos con el equipo y accesorios que tu necesitas</p>
         </div>
         <div class="carousel-caption-mobile">
-          <p class="title-carousel-mobile animate__animated animae__fadeInUp">Venta de equipo de computo</p>
+          <p class="title-carousel-mobile animate__animated animae__fadeInUp">Venta de equipo de cómputo</p>
           <p class="text-carousel-mobile animate__animated animae__fadeInUp">Contamos con el equipo y accesorios que tu necesitas</p>
         </div>
 
@@ -124,6 +137,156 @@
     </div>
     
  </div>
+
+<!-- SECCION SERVICIOS -->
+
+<div class="container-section-title">
+  <img class="side-title" src="assets/imagenes/secciones/sidetitle1.png">
+  <div class="" style="width: 40%;">
+    <h2 class="title-color">SERVICIOS</h2>
+  </div>
+  <img class="side-title" src="assets/imagenes/secciones/sidetitle2.png">
+</div>
+
+<div class="card-group mb-5 container">
+
+  <div *ngFor="let itemServicio of serviciosArray" class="card" (click)="verServicio(itemServicio.id)">
+
+    <div style="display: relative">
+      <div [ngClass]="itemServicio.animacion">
+        <img [src]="itemServicio.imagen" class="card-img-top p-2" alt="...">
+      </div>
+      <div class="card-body">
+        <p class="card-text text-center">{{ itemServicio.descripcion }}</p>
+      </div>
+      <!-- <div class="capahover"></div> -->
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SECCION PRODUCTOS -->
+
+<div class="container-section-title">
+  <img class="side-title" src="assets/imagenes/secciones/sidetitle1.png">
+  <div class="" style="width: 40%;">
+    <h2 class="title-color">PRODUCTOS</h2>
+  </div>
+  <img class="side-title" src="assets/imagenes/secciones/sidetitle2.png">
+</div>
+
+<div class="card-group mb-5 container">
+
+<div class="container">
+
+  <a routerLink="/servicios" class="" style="color: black; text-decoration: none;">
+  <div class="container mt-1 mb-5 product-hover" style="display: flex;" >
+      <div style="width: 30%; margin-right: 2%;">
+        <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/lab2k.jpg" />
+      </div>
+      <div class="pt-5" style="width: 70%;">
+        <p class="title-information-product">Sistema de Laboratorio</p>
+        <p class="text-information-product" >{{ textoProductoLab2k }}</p>
+      </div>
+    </div>
+  </a>
+
+  <a routerLink="/servicios" style="color: black; text-decoration: none;">
+    <div class="container mt-1 mb-5 product-hover" style="display: flex;" >
+      <div class="pt-5" style="width: 70%; margin-right: 2%;">
+        <p class="title-information-product">Sistema de Expediente Electronico</p>
+        <p class="text-information-product" >{{ textoProductoMed2k }}</p>
+      </div>
+      <div style="width: 30%">
+        <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/med2k.jpg" />
+      </div>
+    </div>
+  </a>
+
+  <a routerLink="/servicios" style="color: black; text-decoration: none;">
+    <div class="container mt-1 mb-5 product-hover" style="display: flex;" >
+      <div style="width: 30%; margin-right: 2%;">
+        <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/sia2k.png" />
+      </div>
+      <div class="pt-5" style="width: 70%;">
+        <p class="title-information-product">Sistema Integral Administrativo</p>
+        <p class="text-information-product" >{{ textoProductoSia2k }}</p>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+</div>
+
+<!-- SECCION NUESTROS CLIENTES -->
+
+  <div class="container-section-title">
+    <img class="side-title" src="assets/imagenes/secciones/sidetitle1.png">
+    <div class="" style="width: 40%;">
+      <h2 class="title-color">NUESTROS CLIENTES</h2>
+    </div>
+    <img class="side-title" src="assets/imagenes/secciones/sidetitle2.png">
+  </div>
+
+<div class="row container-fluid">
+  <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3" *ngFor="let itemCliente of clienteArray">
+    <img [src]="itemCliente.imagen" class="img-fluid mx-auto d-block img-cliente">
+  </div>
+</div>
+
+<!-- CONTACTO -->
+
+<div class="container-contact">
+<!-- <h2 class="title-services pt-3">Contactanos</h2> -->
+<h2 class="title-color mt-2 pt-3">CONTACTANOS</h2>
+<app-contact></app-contact>
+</div>
+
+<!-- SECCION UBICACION -->
+
+<app-map></app-map>
+
+<!-- FOOTER -->
+<footer class="">
+  <div class="container-footer text-center">
+      <img src="assets/imagenes/logoComplise.png" style="width: 8%; float: left; margin-left: 2%;" />
+      <span class="text-information" style="margin-right: 3%;">
+          &copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.
+      </span>
+      <a class="text-information" href="assets/Aviso de Confidencialidad Complise.pdf">
+          <span class="">Aviso de privacidad</span>
+      </a>
+  </div>
+</footer>
+
+
+</div>
+
+
+
+<!-- <div *ngFor="let itemProducto of productosArray" class="card" (click)="verProducto(itemProducto.id)">
+  <div style="display: relative;">
+    <img [src]="itemProducto.imagen" class="card-img-top p-2" alt="...">
+    <div class="card-body">
+      <h5 class="title-product">{{ itemProducto.nombre }}</h5>
+      <p class="card-text text-center">{{ itemProducto.descripcion }}</p>
+    </div>
+    <div class="capahover"></div>
+  </div>
+</div> -->
+
+<!-- <div class="col-sm-3 col-md-4 col-lg-4 col-xl-4 mx-auto d-block" style="" *ngFor="let itemProducto of productosArray" (click)="verProducto(itemProducto.id)">
+  <div class="main-card">
+    <img [src]="itemProducto.imagen" class="imagen-service img-thumbnail">
+
+    <div class="container-info-product">
+      <p class="title-information text-center">{{ itemProducto.nombre }}</p>
+      <p class="text-information">{{ itemProducto.descripcion }}</p>
+    </div>
+  </div>
+</div> -->
 
 <!-- SECCION PROMOCIONES -->
 <!--<h2 class="title-services mt-4">Promociones</h2>
@@ -139,92 +302,45 @@
   </div>
 </div>-->
 
-<!-- SECCION SERVICIOS -->
-
-<h2 class="title-color m-2">Servicios</h2>
-<hr class="line-title"/>
-
-<div class="card-group mb-5 container">
-
-  <div *ngFor="let itemServicio of serviciosArray" class="card" (click)="verServicio(itemServicio.id)">
-
-    <div style="display: relative">
-      <div [ngClass]="itemServicio.animacion">
-        <img [src]="itemServicio.imagen" class="card-img-top p-2" alt="...">
-      </div>
-      <div class="card-body">
-        <h5 class="title-product">{{ itemServicio.nombre }}</h5>
-        <p class="card-text text-center">{{ itemServicio.descripcion }}</p>
-      </div>
-      <div class="capahover"></div>
-    </div>
-
+<!-- <div class="container-contact-search">
+    
+  <div class="container-logo"> 
+    <img class="image-logo" [src]="imagenLogo"/> 
   </div>
-
-
+  
+   <div class="container-info">
+    <a href="https://web.whatsapp.com/%F0%9F%8C%90/es">
+      <i class="fa fa-phone "></i>
+      <span class="phone-number">81 8347 2525</span>
+    </a>
+    <input class="searchbar text-center" placeholder="Buscar"/>
+    <i class="fa fa-search margin-icon"></i>
+    <a href="https://es-la.facebook.com/www.complise.mx">
+      <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
+    </a>
+   </div>
 </div>
 
-<!-- SECCION PRODUCTOS -->
+-->
 
-<h2 class="title-color m-2">PRODUCTOS</h2>
-<hr class="line-title"/>
+<!-- <div class="container-top" id="containerTop">
 
-<div class="card-group mb-5 container">
-
-  <!-- <div *ngFor="let itemProducto of productosArray" class="card" (click)="verProducto(itemProducto.id)">
-  <div style="display: relative;">
-    <img [src]="itemProducto.imagen" class="card-img-top p-2" alt="...">
-    <div class="card-body">
-      <h5 class="title-product">{{ itemProducto.nombre }}</h5>
-      <p class="card-text text-center">{{ itemProducto.descripcion }}</p>
-    </div>
-    <div class="capahover"></div>
+  <div class="container-menu-logo-pc">
+   <img class="image-logo" [src]="imagenLogo" />
   </div>
-</div> -->
-
-<div class="col-sm-3 col-md-4 col-lg-4 col-xl-4 mx-auto d-block" style="" *ngFor="let itemProducto of productosArray" (click)="verProducto(itemProducto.id)">
-  <div class="main-card">
-    <img [src]="itemProducto.imagen" class="imagen-service img-thumbnail">
-
-    <div class="container-info-product">
-      <p class="title-information text-center">{{ itemProducto.nombre }}</p>
-      <p class="text-information">{{ itemProducto.descripcion }}</p>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<!-- SECCION NUESTROS CLIENTES -->
-
-<h2 class="title-color">NUESTROS CLIENTES</h2>
-<hr class="line-title"/>
-
-<div class="row container-fluid">
-  <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3" *ngFor="let itemCliente of clienteArray">
-    <img [src]="itemCliente.imagen" class="img-fluid mx-auto d-block img-cliente">
-  </div>
-</div>
-
-<!-- CONTACTO -->
-
-<div class="container-contact">
-<!-- <h2 class="title-services pt-3">Contactanos</h2> -->
-<span class="title-color">CONTACTANOS</span>
-<hr class="line-title"/>
-<app-contact></app-contact>
-</div>
-
-<!-- SECCION UBICACION -->
-
-<app-map></app-map>
-
-<!-- FOOTER -->
-<footer class="">
-  <div class="container-footer">
-      <p class="text-center" style="color: white; font-size: 12px;">&copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.</p>
-      <a class="" style="color: white; font-size: 12px;">
-        <p class="text-center">Aviso de privacidad</p>
+  
+  <div class="container-menu-options">
+    <div class="container-info">
+      <a href="https://wa.me/528183472525">
+        <i class="fa fa-phone "></i>
+        <span class="phone-number">81 8347 2525</span>
       </a>
+      <input class="searchbar text-center" placeholder="Buscar"/>
+      <i class="fa fa-search margin-icon"></i>
+      <a href="https://es-la.facebook.com/www.complise.mx">
+        <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
+      </a>
+     </div>
   </div>
-</footer>
+
+</div> -->

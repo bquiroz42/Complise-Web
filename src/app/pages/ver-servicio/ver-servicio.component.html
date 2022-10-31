@@ -27,6 +27,42 @@
   
   </div> -->
 
+
+  <div class="container-information pt-2" style="display: flex;">
+    
+    <div class="col-2">
+      <img class="imagen-logo" [src]="imagenLogo" id="logo" routerLink="/index" style="cursor: pointer" />
+    </div>
+    <div class="col-10">
+  
+      <div class="col-10 position-options">
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="">
+          <i class="fa fa-envelope" style="color: black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://wa.me/528183472525">
+          <i class="fa fa-mobile" style="color:black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <input class="searchbar text-center" placeholder="Buscar" style="font-family: 'Roboto';"/>
+        <i class="fa fa-search icon-position"></i>
+      </div>
+  
+      <div class="col-10">
+        <ul class="list-group-menu">
+          <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+            <a [routerLink]="pagina.ruta" class="ml-3 text-option-menu">
+              {{ pagina.nombre }}
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+    </div>
+  
+  </div>
+
 <div class="m-3">
   <h2 class="text-center text-title"> {{ nombre }} </h2>
   <p class="card-text"> {{ descripcion }} </p>
@@ -37,6 +73,60 @@
 <div class="mx-auto d-block text-center">
   <button class="btn btn-danger text-button m-3">Solicitar servicio</button>
 </div>
+
+
+<!-- PRUEBA -->
+<!-- <div>
+
+  <div class=" mt-1 mb-3" style="display: flex;">
+    <div class="col-4">
+      <img class="img-fluid mx-auto d-block" style="width: 70%; height: 200px; border: 3px solid red;" src="assets/imgclientes/med2k.jpg" />
+    </div>
+    <div class="col-7">
+      <p class="title-information-product">Sistema de Expediente Electrónico</p>
+      <p class="text-information-product">{{ textoProductoMed2k }}</p>
+    </div>
+  </div> 
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div style="width: 30%; margin-right: 2%;">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/lab2k.jpg" />
+    </div>
+    <div class="pt-5" style="width: 70%;">
+      <p class="title-information-product">Sistema de Laboratorio</p>
+      <p class="text-information-product" >{{ textoProductoLab2k }}</p>
+    </div>
+  </div>
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div class="pt-5" style="width: 70%; margin-right: 2%;">
+      <p class="title-information-product">Sistema de Expediente Electronico</p>
+      <p class="text-information-product" >{{ textoProductoMed2k }}</p>
+    </div>
+    <div style="width: 30%">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/med2k.jpg" />
+    </div>
+  </div>
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div style="width: 30%; margin-right: 2%;">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/sia2k.png" />
+    </div>
+    <div class="pt-5" style="width: 70%;">
+      <p class="title-information-product">Sistema Integral Administrativo</p>
+      <p class="text-information-product" >{{ textoProductoSia2k }}</p>
+    </div>
+  </div>
+
+</div> -->
+
+
+<!-- PRUEBA -->
+
+<!-- <div class="reduce" style="height: 100px; background: black; display: flex;">
+  <img class="img-fluid" style="width: 20%" src="assets/imagenes/img1.jpg"/>
+</div> -->
+
 
 <!-- CODIGO DE PRUEBAS -->
 <!-- <div class="row m-2">

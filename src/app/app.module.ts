@@ -13,6 +13,7 @@ import { VerServicioComponent } from './pages/ver-servicio/ver-servicio.componen
 import { VerProductoComponent } from './pages/ver-producto/ver-producto.component';
 import { MapComponent } from './component/map/map.component';
 import { ContactComponent } from './component/contact/contact.component';
+import { ContactoFormularioComponent } from './pages/contacto-formulario/contacto-formulario.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './component/contact/contact.component';
     VerServicioComponent,
     VerProductoComponent,
     MapComponent,
-    ContactComponent
+    ContactComponent,
+    ContactoFormularioComponent
   ],
   imports: [
     BrowserModule,

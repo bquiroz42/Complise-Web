@@ -16,10 +16,10 @@ export class IndexComponent implements OnInit {
   mostrarMenu: boolean = false;
 
   paginasArray =  [
-    // { nombre: 'Inicio',ruta: '/inicio' },
     { nombre: 'Servicios', ruta: '/servicios'},
     { nombre: 'Productos', ruta: '/productos'},
-    { nombre: 'Nosotros', ruta: '/nosotros'}
+    { nombre: 'Nosotros', ruta: '/nosotros'},
+    { nombre: 'Contacto', ruta: '/contacto'}
   ]
 
   // carouselArray = [
@@ -39,75 +39,108 @@ export class IndexComponent implements OnInit {
   ]*/
 
   serviciosArray = [
-    { nombre: 'Desarrollo de Software a la medida', descripcion: 'Desarrollo de sistemas con soluciones para empresas y clientes.', imagen: 'assets/imgclientes/DESARROLLO.png' , animacion: 'floating', id: 1 },
-    { nombre: 'Reparación de equipo', descripcion: 'Reparacion de Equipo de Computo y otros aparatos electronicos.', imagen: 'assets/imgclientes/REDES.png' , animacion: 'floating2' , id: 2 },
-    { nombre: 'Soporte Técnico', descripcion: 'Soporte técnico calificado para ayudarte a resolver algún problema.', imagen: 'assets/imgclientes/SOPORTE.png' , animacion: 'floating3', id: 3 },
+    { nombre: 'Desarrollo de Software a la medida', descripcion: 'Desarollamos sistemas a la medida personzalizados, brindando soluciones a todos sus requerimientos.', imagen: 'assets/imagenes/secciones/DESARROLLO.png' , animacion: 'floating', id: 1 },
+    { nombre: 'Reparación de equipo', descripcion: 'Reparación de computadoras, impresoras, mantenimientos preventivos y correctivos, instalación de antivirus, impresoras a domicilio o en nuestras instalaciones y en tiempo record.', imagen: 'assets/imagenes/secciones/SOPORTETECNICO.png' , animacion: 'floating2' , id: 2 },
+    { nombre: 'Soporte Técnico', descripcion: 'Contamos con equipos de computo de las marcas mas reconocidas en el mercado, así como equipos ensamblados a según tus necesidades.', imagen: 'assets/imagenes/secciones/VENTA.png' , animacion: 'floating3', id: 3 },
   ]
   
   productosArray = [
-    { nombre: 'Med2k', descripcion: 'Sistema para control de Hospitales', imagen: 'assets/imagenes/med2k.png' , id: 1 },
-    { nombre: 'Sia2k', descripcion: 'Sistema de control de inventario', imagen: 'assets/imagenes/ventaEquipos.jpg', id: 2 },
-    { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios', imagen: 'assets/imagenes/lab2k.jpg', id: 3 },
+    { nombre: 'Med2k', descripcion: 'Sistema para control de Hospitales', imagen: 'assets/imagenes/secciones/med2k.jpg' , id: 1 },
+    { nombre: 'Sia2k', descripcion: 'Sistema de control de inventario', imagen: 'assets/imagenes/secciones/sia2k.png', id: 2 },
+    { nombre: 'Lab2k', descripcion: 'Sistema de control para Laboratorios', imagen: 'assets/imagenes/secciones/lab2k.jpg', id: 3 },
   ]
 
   clienteArray = [
     {imagen: 'assets/imgclientes/artrolab.png', id: 1},
     {imagen: 'assets/imgclientes/caritas.png', id: 2},
     {imagen: 'assets/imgclientes/cem.png', id: 3}, 
-    {imagen: 'assets/imgclientes/creasis.png', id: 4},
-    {imagen: 'assets/imgclientes/delta.png', id: 5},
-    {imagen: 'assets/imgclientes/fertilita.png', id: 6},
-    {imagen: 'assets/imgclientes/gineco.png', id: 7}, 
-    {imagen: 'assets/imgclientes/iech.png', id: 8},
-    {imagen: 'assets/imgclientes/maxicargas.png', id: 9},
-    {imagen: 'assets/imgclientes/moreira.png', id: 10},
-    {imagen: 'assets/imgclientes/tauro.png', id: 11},
-    {imagen: 'assets/imgclientes/uanl.png', id: 12},
+    {imagen: 'assets/imgclientes/uanl.png', id: 4},
+    {imagen: 'assets/imgclientes/creasis.png', id: 5},
+    {imagen: 'assets/imgclientes/delta.png', id: 6},
+    {imagen: 'assets/imgclientes/fertilita.png', id: 7},
+    {imagen: 'assets/imgclientes/gineco.png', id: 8}, 
+    {imagen: 'assets/imgclientes/iech.png', id: 9},
+    {imagen: 'assets/imgclientes/maxicargas.png', id: 10},
+    {imagen: 'assets/imgclientes/moreira.png', id: 11},
+    {imagen: 'assets/imgclientes/tauro.png', id: 12},
   ]
 
   cambiarImagen = "assets/imagenes/bg_bits.gif"; 
-  // itemId: {nombre: string, descripcion: string, imagen: string, id: number};
 
   objetoServicio: [{}];
 
+
+  textoProductoMed2k = 'Con ME2K - Sistema de Control de Expedientes Electrónico, encargado de administrar y gestionar los registros de los pacientes de un hospital, facturación y registro del expediente clinico del paciente, entre otros...';
+  textoProductoSia2k = 'Con SIA2K - Sistema Integral Administrativo, controla las entradas y salidas de tus inventarios. Obten reportes de tus existencias, articulos, proveedores, etc.';
+  textoProductoLab2k = 'Con LAB2K - Sistema de Control de Laboratorios puedes administrar y gestionar las pruebas medicas de tus pacientes y realizar distintos estudios.... Cuenta con reportes de graficas y datos para ver a detalle la informacion.';
+
   constructor(private router: Router) { }
 
+  
   ngOnInit(): void {
-    window.scrollTo(0,0);
+    
+    // window.scrollTo(0,0);
+    
+    // LOGICA PARA MANIPULAR LA CANTIDAD DE PIXELES DE LA PANTALLA AL HACER SCROLL
 
+    let fixedMenu = 20;
+
+    let containerTop = document.getElementById("containerTop");
+
+    let carousel = document.getElementById("carousel");
+
+    let containerBottom = document.getElementById("containerBottom")
+    let logo = document.getElementById("logo")
+
+    window.onscroll = function(){
+      let scrollY = window.scrollY;
+
+      // MOSTRAR MENU FIXED
+      if(scrollY >= fixedMenu){
+
+        carousel.style.paddingTop = '10%';
+        
+        containerTop.style.position = 'fixed';
+
+        containerTop.style.transition = 'all linear 0.3s';
+        containerTop.style.marginTop = '-6px';
+        containerTop.style.transform = 'scaleY(0.95)';
+
+        logo.style.transform = 'scaleY(0.80)';
+
+        // containerBottom.style.transition = 'all linear 0.1s';
+        // containerBottom.style.marginTop = '-8px';
+        // containerBottom.style.transform = 'scaleY(0.85)';
+        
+      }
+
+      // MOSTRAR MENU RELATIVE
+      if(scrollY <= fixedMenu){
+
+        containerTop.style.animation = '';
+        containerTop.style.position = 'relative';
+
+        carousel.style.paddingTop = '0%';
+
+        containerTop.style.marginTop = '0px';
+        containerTop.style.transform = 'scaleY(1)';
+
+        logo.style.transform = 'scaleY(1)';
+      }
+
+     }
+    
   }
+  
 
   verServicio(id){
-
-    // item = this.objetoServicio;
-    // console.log(id);
-    // console.log(nombre, descripcion, imagen);
-
-    // this.serviciosArray.forEach( item => {
-
-    //   if(id === item.id){
-    //       this.router.navigate(['/servicios/:' + id]);
-    //   }
-    // })
-
-    console.log(id);
-
-    // localStorage.setItem('servicio', JSON.stringify(item));
-
     // PARA MANDAR AL USUARIO CON EL ID DEL SERVICIO A LA PAGINA DE SERVICIOS(POR ID)
     this.router.navigate(['/servicios/:' + id]);
-
-    // this.router.navigate('/servicios/' + ´{id}´);
   }
 
   verProducto(id){
     this.router.navigate(['/productos/:' + id]);
   }
-
-  // AddClassScroll(){
-  //   document.body.classList.add('.stop-scrolling')
-  //   document.querySelector('body');
-  // }
 
   activarMenu(){
     this.mostrarMenu = true;

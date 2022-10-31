@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactoFormularioComponent } from './pages/contacto-formulario/contacto-formulario.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ProductosComponent } from './pages/productos/productos.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'servicios', component: ServiciosComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'nosotros', component: NosotrosComponent },
+  { path: 'contacto', component: ContactoFormularioComponent },
   { path: 'servicios/:id', component: VerServicioComponent },
   { path: 'productos/:id', component: VerProductoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'index' }

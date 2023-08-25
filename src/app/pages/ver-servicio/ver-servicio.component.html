@@ -1,0 +1,186 @@
+<!-- <div class="container" *ngFor="let item of serviciosArray">
+<h2>{{ item.nombre }}</h2>
+<h2>{{ item.descripcion}}</h2>
+<h2>{{ item.imagen }}</h2>
+
+</div> -->
+
+<!-- <div class="row">
+
+    <div class="container-menu-logo">
+    <img class="image-logo" [src]="imagenLogo" />
+    </div>
+    
+    <div class="container-menu-options">
+      <div class="container-info">
+        <a href="https://web.whatsapp.com/%F0%9F%8C%90/es">
+          <i class="fa fa-phone "></i>
+          <span class="phone-number">81 8347 2525</span>
+        </a>
+        <input class="searchbar text-center" placeholder="Buscar"/>
+        <i class="fa fa-search margin-icon"></i>
+        <a href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook fa-xl margin-icon"></i>
+        </a>
+       </div>
+    </div>
+  
+  </div> -->
+
+
+  
+  <div class="animate__animated animate__fadeIn">
+    <div class="container-information pt-2" style="display: flex;">
+      
+      <div class="col-2">
+        <img class="imagen-logo" [src]="imagenLogo" id="logo" routerLink="/index" style="cursor: pointer" />
+      </div>
+      <div class="col-10">
+    
+        <div class="col-10 position-options">
+          <a class="" style="margin-right: 1%; margin-top: 3px;" href="">
+            <i class="fa fa-envelope" style="color: black"></i>
+          </a>
+          <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://wa.me/528183472525">
+            <i class="fa fa-mobile" style="color:black"></i>
+          </a>
+          <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://es-la.facebook.com/www.complise.mx">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <input class="searchbar text-center" placeholder="Buscar" style="font-family: 'Roboto';"/>
+          <i class="fa fa-search icon-position"></i>
+        </div>
+    
+        <div class="col-10">
+          <ul class="list-group-menu">
+            <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+              <a [routerLink]="pagina.ruta" class="ml-3 text-option-menu">
+                {{ pagina.nombre }}
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+      </div>
+    
+    </div>
+    
+    <div class="m-3">
+    <h2 class="text-center text-title"> {{ nombre }} </h2>
+    <p class="card-text content"> {{ descripcion }} </p>
+    <img [src]="imagen" class="img-thumbnail img-fluid img-service">
+    
+    </div>
+    
+    <div class="mx-auto d-block text-center">
+    <button class="btn btn-danger text-button m-3">
+      <a routerLink="/contacto" style="color:white;">Solicitar servicio</a>
+    </button>
+    </div>
+</div>
+
+
+<!-- PRUEBA -->
+<!-- <div>
+
+  <div class=" mt-1 mb-3" style="display: flex;">
+    <div class="col-4">
+      <img class="img-fluid mx-auto d-block" style="width: 70%; height: 200px; border: 3px solid red;" src="assets/imgclientes/med2k.jpg" />
+    </div>
+    <div class="col-7">
+      <p class="title-information-product">Sistema de Expediente Electrónico</p>
+      <p class="text-information-product">{{ textoProductoMed2k }}</p>
+    </div>
+  </div> 
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div style="width: 30%; margin-right: 2%;">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/lab2k.jpg" />
+    </div>
+    <div class="pt-5" style="width: 70%;">
+      <p class="title-information-product">Sistema de Laboratorio</p>
+      <p class="text-information-product" >{{ textoProductoLab2k }}</p>
+    </div>
+  </div>
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div class="pt-5" style="width: 70%; margin-right: 2%;">
+      <p class="title-information-product">Sistema de Expediente Electronico</p>
+      <p class="text-information-product" >{{ textoProductoMed2k }}</p>
+    </div>
+    <div style="width: 30%">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/med2k.jpg" />
+    </div>
+  </div>
+
+  <div class="container mt-1 mb-3 " style="display: flex;" >
+    <div style="width: 30%; margin-right: 2%;">
+      <img class="img-fluid mx-auto d-block" style="width: 100%; height: 200px; border: 3px solid red;" src="assets/imagenes/secciones/sia2k.png" />
+    </div>
+    <div class="pt-5" style="width: 70%;">
+      <p class="title-information-product">Sistema Integral Administrativo</p>
+      <p class="text-information-product" >{{ textoProductoSia2k }}</p>
+    </div>
+  </div>
+
+</div> -->
+
+
+<!-- PRUEBA -->
+
+<!-- <div class="reduce" style="height: 100px; background: black; display: flex;">
+  <img class="img-fluid" style="width: 20%" src="assets/imagenes/img1.jpg"/>
+</div> -->
+
+
+<!-- CODIGO DE PRUEBAS -->
+<!-- <div class="row m-2">
+  <div class="col-4 mb-5" style="">
+    <div class="main-card">
+      <img src="assets/imagenes/img13.jpg" class="imagen-service">
+  
+      <div class="container-info">
+        <p class="title-information">Med2k</p>
+        <p class="text-information">Sistema para control y gestion de Hospitales</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 mb-5" style="">
+    <div class="main-card">
+      <img src="assets/imagenes/img13.jpg" class="imagen-service">
+  
+      <div class="container-info">
+        <p class="title-information">Med2k</p>
+        <p class="text-information">Sistema para control y gestion de Hospitales</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 mb-5" style="">
+    <div class="main-card">
+      <img src="assets/imagenes/img13.jpg" class="imagen-service">
+  
+      <div class="container-info">
+        <p class="title-information">Med2k</p>
+        <p class="text-information">Sistema para control y gestion de Hospitales</p>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+
+
+
+<!-- <div cs -->
+
+<!-- <div class="container-info2 mb-5">
+  <p class="title-information">Med2k</p>
+  <p class="text-information">Sistema para control y gestion de Hospitales</p>
+</div> -->
+
+
+
+<!-- <div class="container-img">
+    <img src="/assets/imagenes/ventaEquipos.jpg" class="img-service1" />
+    <div class="capa-imagen">
+    </div>
+</div> -->

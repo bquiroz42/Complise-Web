@@ -1,0 +1,326 @@
+.content { white-space: pre-line; }
+
+.row{
+    margin: 0;
+}
+
+.text-title{
+    font-size: 12px;
+    font-family: 'Raleway';
+}
+
+.card-text{
+    width: 100%;
+    font-family: 'Roboto';
+    text-align: justify;
+    font-weight: 800;
+}
+
+.img-service{
+    width: 100%;
+    height: auto
+}
+
+.text-button{
+    font-size: 1rem;
+}
+
+.title-information-product{
+    font-weight: 800;
+    font-size: 20px;
+    font-family: 'Raleway';
+    color: rgb(47, 154, 202 );
+    text-shadow: 5px;
+}
+
+/* .text-information-product{
+    font-size: 14px;
+    font-family: 'Raleway';
+    text-align: justify;
+} */
+
+
+
+/* menu responsive pc */
+
+.container-menu-logo-pc{
+    width: 30%;
+    height: auto;
+    display: none;
+}
+
+/* IMAGE LOGO COMPLISE */
+.image-logo{
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.container-information{
+    display: flex;
+    background: white;
+}
+
+.icon-contact{ width: 20px; }
+
+.phone-number{
+    font-family: 'Roboto';
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.searchbar{
+    border-radius: 10px;
+    width: 200px;
+}
+
+.icon-facebook{
+ font-size: 1rem;   
+}
+
+.image-responsive-bg{
+    width: 100%;
+    height: auto;
+}
+
+.text-carousel{
+    color: white;
+    font-size: 30px;
+}
+
+.container-icon-menu{ display: none; }
+
+.menu-show{ display: block; }
+
+
+.title-color{
+    background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
+    font-family: "Distortion";
+    font-size: calc(1vw + 1.5rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    display: block;
+}
+
+.text-option-menu{
+    font-size: 1.2rem;
+    font-family: 'Distortion';
+    color: rgb(219,0,0);
+}
+
+.imagen-logo{
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin-left: 54%;
+    padding-top: 8%;
+}
+
+.list-group-menu{ list-style: none; }
+
+.list-item-menu{
+    display: inline;
+}
+
+.list-item-menu a{
+    text-decoration: none;
+    margin-right: 3%;
+}
+
+.position-options{
+    display: flex;
+    justify-content: flex-end;
+    /* margin-right: 5%; */
+    margin-left: 12%;
+}
+
+.fa-facebook{ color: black; font-size: 20px; }
+
+.icon-position{
+    position: absolute;
+    left: 93%;
+    top: 15px;
+}
+
+/* INYECCION DE FONT PARA TITULOS */
+@font-face {
+    font-family: Distortion;
+    src: url('/assets/imgclientes/Distortion.otf');
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .text-title{
+        font-size: 1.5rem;
+    }
+    .card-text{
+        font-size: 1.1rem;
+    }
+    .img-service{
+        height: 30vh;
+    }
+    .text-button{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    .text-title{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .card-text{
+        font-size: 1.4rem;
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .text-title{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .card-text{
+        font-size: 1.4rem;
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .text-title{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .card-text{
+        font-size: 1rem;
+        width: 80%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 80%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1.4rem;
+    }
+}
+
+
+/* EXTRA LARGE SCREENS */
+@media screen and (min-width: 1201px){
+
+    .text-title{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .card-text{
+        font-size: 1rem;
+        width: 70%;
+        margin: auto;
+        display: block;
+        margin-bottom: 2%;
+    }
+
+    .img-service{
+        width: 30%;
+        margin: auto;
+        display: block;
+        height: 40vh;
+    }
+    .text-button{
+        font-size: 1rem;
+    }
+
+
+    /* IMAGE LOGO COMPLISE */
+
+    .container-menu-logo-mobile{ display: none; }
+
+    .container-menu-logo-pc{ display: flex; }
+
+    .image-logo{
+        width: 40%;
+        margin: auto;
+        display: block;
+    }
+    
+    /* MENU OPTIONS */
+
+    .container-info{ 
+        min-width: 28vw;
+        max-width: 32vw;
+    }
+
+    .icon-contact{ width: 20px; }
+    
+    .phone-number{
+        font-family: 'Roboto';
+        padding-right: 10px;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .searchbar{
+        border-radius: 10px;
+        margin-right: 10px;
+        width: 200px;
+    }
+    
+    .icon-facebook{ font-size: 18px; }
+    
+    .image-responsive-bg{ min-height: 84vh; max-height: 87vh; }
+    
+    /* CAROUSEL */
+    
+    .text-carousel{
+        color: white;
+        font-size: calc(1vw + 1rem);
+    }
+    
+    .carousel-caption-mobile{ opacity: 0; }
+
+    .line-title{ width: 20%; }
+
+    .img-cliente{ height: 20vh; width: 150px; }
+
+    .container-icon-menu{ display: none; }
+
+    .menu-show{ display: block; }
+
+    .carousel-indicators{
+        bottom: 15px;
+    }
+}

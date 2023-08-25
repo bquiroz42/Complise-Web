@@ -1,0 +1,116 @@
+<div class="animate__animated animate__fadeIn">
+
+        <form (ngSubmit)="onSubmit(contactForm.value)" [formGroup]="contactForm">
+
+            <div class="container-formulary">
+     
+                <div class="animate__animated animate__fadeInDown">
+                    <p class="title-section">Contactanos</p>
+
+                    <!-- CAMPO NOMBRE - VALIDACIONES -->
+
+                    <p class="text-section">*Nombre(s):</p>
+                    <input type="text" class="input-information" name="name" required formControlName="name"/>
+        
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('name').errors && contactForm.get('name')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese 3 caracteres como mínimo
+                        </div>
+                    </div>
+
+                    <!-- CAMPO APELLIDO - VALIDACIONES -->
+                    
+                    <p class="text-section">*Apellido(s):</p>
+                    <input type="text" class="input-information" formControlName="apellido"/>
+    
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('apellido').errors && contactForm.get('apellido')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese 3 caracteres como mínimo
+                        </div>
+                    </div>
+
+                    <!-- CAMPO NOMBRE DE EMPRESA - VALIDACIONES -->
+                    
+                    <p class="text-section">Nombre de la empresa:</p>
+                    <input type="text" class="input-information" formControlName="empresa"/>
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('empresa').errors && contactForm.get('empresa')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese 4 caracteres como mínimo
+                        </div>
+                    </div>
+
+                    <!-- CAMPO CORREO ELECTRONICO - VALIDACIONES -->
+
+                    <p class="text-section">*Correo eletrónico:</p> 
+                    <input type="email" class="input-information" formControlName="correo"/>
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('correo').errors && contactForm.get('correo')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese 3 caracteres como mínimo
+                        </div>
+                    </div>
+
+                    <!-- CAMPO NUMERO TELEFONICO - VALIDACIONES -->
+                    
+                    <p class="text-section">*Número teléfonico:</p>
+                    <input type="text" class="input-information" formControlName="numeroTelefono" />
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('numeroTelefono').errors && contactForm.get('numeroTelefono')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese un número valido.
+                        </div>
+                    </div>
+
+                    <!-- CAMPO REQUERIMIENTOS INFORMACION - VALIDACIONES -->
+        
+                    <p class="text-section">Describenos tu requerimiento:</p>
+                    <textarea class="input-information mx-auto d-block" formControlName="textoInformacion">
+        
+                    </textarea>
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="contactForm.get('textoInformacion').errors && contactForm.get('textoInformacion')?.touched">
+                        <div class="alert alert-danger">
+                            Este campo es requerido, ingrese 5 caracteres como minimo
+                        </div>
+                    </div>
+        
+                    <!-- <div *ngIf="contactForm.valid">
+                            
+                    </div> -->
+
+                    <button type="submit" class="button" [ngClass]="contactForm.invalid ? 'bg-danger' : 'bg-success'" #ok>
+                        Enviar
+                    </button>
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="mostrarMensaje">
+                        <div class="alert alert-primary">
+                            Información enviada con éxito
+                        </div>
+                    </div>
+
+                    <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="mostrarMensaje === false && contactForm.invalid && contactForm.dirty">
+                        <div class="alert alert-primary">
+                            Favor de llenar los campos requeridos
+                        </div>
+                    </div>
+
+                    <!-- <div style="width: 25%;" class="mx-auto d-block animate__animated animate__fadeIn m-2" *ngIf="ok.valid">
+                        <div class="alert alert-primary">
+                            Información enviada con éxito
+                        </div>
+                    </div> -->
+
+                    <!-- <button type="submit" class="button" [disabled]="contactForm.invalid">
+                        Enviar
+                    </button>  -->
+
+
+                </div>
+        
+                 </div>
+    
+        </form>
+
+</div>
+

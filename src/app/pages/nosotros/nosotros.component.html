@@ -1,0 +1,200 @@
+<!-- ANIMATION SHOW PAGE -->
+<div class="animate__animated animate__fadeIn">
+
+   <!-- CONTACT INFO -->
+
+<div class="container-top" id="containerTop">
+
+  <div class="container-information pt-2" style="display: flex;">
+    
+    <div class="col-2">
+        <img class="imagen-logo" [src]="imagenLogo" id="logo" routerLink="/index" style="cursor: pointer" />
+    </div>
+    <div class="col-10">
+
+      <div class="col-11 position-options">
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="mailto:complise.soporte@gmail.com?Subject=Buen%20día,%20quisiera%20saber%20más%20sobre%20este%20servicio.%20(Escriba%20el%20producto/servicio%20requerido)">
+          <i class="fa fa-envelope" style="color: black"></i>
+        </a>
+
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="tel:+528183472525">
+          <i class="fa fa-mobile" style="color:black"></i>
+        </a>
+
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <input class="searchbar text-center" placeholder="Buscar" style="font-family: 'Roboto';"/>
+        <i class="fa fa-search icon-position"></i>
+      </div>
+
+      <div class="col-12">
+        <ul class="list-group-menu">
+          <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+
+            <a [routerLink]="pagina.ruta" class="ml-3 text-option-menu">              
+              {{ pagina.nombre }}
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+  
+</div>
+
+
+      <!-- NAVBAR MENU -->
+<!-- <div class="menu-colapse menu-container">
+
+  <div class="container-menu-logo-mobile">
+    <img class="image-logo-mobile" [src]="imagenLogo" />
+  </div>
+
+  <div class="container-icon-menu">
+    <i class="fa fa-bars ocultarIcono" (click)="activarMenu()"></i>
+  </div>
+  
+  <div *ngIf="mostrarMenu === true" class="capa-fondo animate__animated animate__fadeIn sticky">
+    <div class="panel-lateral-menu">
+      <div class="" (click)="cerrarMenu()">
+        <i class="fa fa-solid fa-xmark" style="color: white; margin:10%; font-size: 2rem;"></i>
+      </div>
+      <ul class="list-group-menu">
+        <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+          <i class="fa fa-arrow-right" style="color: white;margin-right: 5%; font-size: calc(1vw + 1rem);"></i>
+          <a [routerLink]="pagina.ruta" class="ml-3" style="font-size: calc(1vw + 1rem);">{{pagina.nombre}}</a>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="menu-show">
+    <ul class="list-group-menu" style="display: flex; justify-content: flex-end;">
+      <li class="list-item-menu" style="margin-right: 2%;" *ngFor="let pagina of paginasArray">
+        <a [routerLink]="pagina.ruta">{{pagina.nombre}}</a>
+      </li>
+    </ul>
+  </div>
+  
+</div> -->
+
+<!-- NAVBAR MENU VISTA MOVIL -->
+<div class="menu-container">
+
+  <div class="container-menu-logo-mobile">
+    <img class="image-logo-mobile" routerLink="/index" [src]="imagenLogo" />
+  </div>
+
+  <div class="container-icon-menu">
+    <i class="fa fa-bars" (click)="activarMenu()"></i>
+  </div>
+  
+  <div *ngIf="mostrarMenu === true" class="capa-fondo animate__animated animate__fadeIn">
+    <div class="panel-lateral-menu">
+      <div class="" (click)="cerrarMenu()">
+        <i class="fa fa-solid fa-xmark" style="color: white; margin:10%; font-size: 2rem;"></i>
+      </div>
+      <ul class="list-group-menu" style="padding: 0px">
+        <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+          <!-- <i class="fa fa-arrow-right" style="color: white;margin-right: 5%; font-size: calc(1vw + 1rem);"></i> -->
+          <a [routerLink]="pagina.ruta" class="ml-3" style="font-size: calc(1vw + 1rem);">{{pagina.nombre}}</a>
+        </li>
+      </ul>
+
+      <ul class="list-group-item">
+        <li class="list-item-menu"><a href="mailto:complise.soporte@gmail.com?Subject=Buen%20día,%20quisiera%20saber%20más%20sobre%20este%20servicio.%20(Escriba%20el%20producto/servicio%20requerido)"><i class="fa fa-envelope " style="display: block; margin: auto; text-align: center; font-size: 25px;"></i></a></li>
+        <li class="list-item-menu"><a href="tel:+528183472525"><i class="fa fa-mobile" style="display: block; margin: auto; text-align: center;  font-size: 25px;"></i></a></li>
+        <li class="list-item-menu "><a href="https://es-la.facebook.com/www.complise.mx"><i class="fa-brands fa-facebook" style="display: block; margin: auto; text-align: center;  font-size: 25px; color: white"></i></a></li>
+      </ul>
+
+    </div>
+    
+  </div>
+
+  <div class="menu-show">
+    <ul class="list-group-menu" style="display: flex; justify-content: flex-end;">
+      <li class="list-item-menu" style="margin-right: 2%;" *ngFor="let pagina of paginasArray">
+        <a [routerLink]="pagina.ruta">{{ pagina.nombre }}</a>
+      </li>
+    </ul>
+  </div>
+  
+</div>
+
+<!---->
+
+    <div class="container-section-title">
+        <h2 class="title-color">QUIENES SOMOS </h2>
+    </div>
+    
+    <div class="row container-fluid">
+        <div class="col-12 col-md-6 col-lg-6 ">
+            <img src="assets/imagenes/secciones/team_enterprise.jpg" class="img-fluid">
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-6 animate__animated animate__fadeInUp">
+            <p style="text-align: justify;">{{ textMainInformation }}</p>
+            <p>Entre algunos de los servicios que ofrecemos, se encuentran los siguientes:</p>
+            <ul class="list-item-group">
+                <li *ngFor="let item of listCheck">
+                    <i class="fa fa-check text-info m-2"></i>
+                    <span>{{ item.text }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="row container-fluid container-bg-gray mt-5 pb-2">
+
+        <div class="card-group mb-5 container">
+
+          <div *ngFor="let itemInfo of empresaInfoArray" class="card animate__animated animate__backInDown" style="margin: 10px; background: rgba(200,200,200,0.3); border: none;">
+      
+          <div class="card-hover" >
+
+            <img [src]="itemInfo.imagen" class="card-img-top p-2 img-fluid" style="width: 250px; height: 15vh" alt="...">
+            <div class="card-body">
+              <h5 class="title-color">{{ itemInfo.titulo }}</h5>
+              <p class="card-text content" style="text-align: justify;">{{ itemInfo.descripcion }}</p>
+            </div>
+          </div>
+          
+        </div>
+        
+        </div>
+    
+        <div class="col-12">
+          <h5 class="title-color">Nuestro Equipo</h5>
+          <p class="content" style=""> {{ textNuestroEquipo }} </p>
+            <img src="assets/imagenes/equipo.jpg" class="rounded img-fluid img-team m-5 mx-auto d-block animate__animated animate__fadeInUp">
+        </div>
+    
+    </div>
+    
+    <!-- FOOTER -->
+    
+        <footer class="">
+            <div class="container-footer text-center">
+              <div class="row">
+                <div class="col-2 col-md-3 col-lg-3">
+                  <img src="assets/imagenes/logoComplise.png" style="width: 50%; float: left; margin-left: 2%;" />
+                </div>
+                <div class="col-10 col-md-6 col-lg-6">
+                  <span class="text-information" style="margin-right: 2%;">
+                    &copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.
+                </span>
+                <a class="text-information" href="assets/Aviso de Confidencialidad Complise.pdf">
+                    <span class="">Aviso de privacidad</span>
+                </a>
+                </div>            
+              </div>
+            </div>
+        </footer>
+        
+</div>

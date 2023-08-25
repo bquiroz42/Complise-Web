@@ -1,0 +1,71 @@
+<div class="animate__animated animate__fadeIn">
+
+
+  <div class="container-information pt-2" style="display: flex;">
+    
+    <div class="col-2">
+      <img class="imagen-logo" [src]="imagenLogo" id="logo" routerLink="/index" style="cursor: pointer" />
+    </div>
+    <div class="col-10">
+  
+      <div class="col-10 position-options">
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="">
+          <i class="fa fa-envelope" style="color: black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://wa.me/528183472525">
+          <i class="fa fa-mobile" style="color:black"></i>
+        </a>
+        <a class="" style="margin-right: 1%; margin-top: 3px;" href="https://es-la.facebook.com/www.complise.mx">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <input class="searchbar text-center" placeholder="Buscar" style="font-family: 'Roboto';"/>
+        <i class="fa fa-search icon-position"></i>
+      </div>
+  
+      <div class="col-10">
+        <ul class="list-group-menu">
+          <li class="list-item-menu" *ngFor="let pagina of paginasArray">
+            <a [routerLink]="pagina.ruta" class="ml-3 text-option-menu">
+              {{ pagina.nombre }}
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+    </div>
+  
+  </div>
+
+<!-- SECCION PRODUCTOS -->
+
+<!-- <h2 class="title-services text-center title-color">Productos</h2>
+<hr style="width: 10%; margin-left: 45%;"/> -->
+
+<div class="container-section-title">
+  <!-- <img class="side-title" src="assets/imagenes/secciones/sidetitle1.jpg"> -->
+  <!-- <div class="" style="width: 40%;"> -->
+    <h2 class="title-color">Productos</h2>
+  <!-- </div> -->
+  <!-- <img class="side-title" src="assets/imagenes/secciones/sidetitle2.jpg"> -->
+</div>
+
+  <div class="card-group mb-5 container">
+
+    <div *ngFor="let itemProducto of productosArray" class="card animate__animated animate__backInUp" (click)="verProducto(itemProducto.id)">
+
+    <div class="card-hover">
+      <img [src]="itemProducto.imagen" class="card-img-top p-2" alt="...">
+      <div class="card-body">
+        <h5 class="title-product">{{ itemProducto.nombre }}</h5>
+        <p class="card-text">{{ itemProducto.descripcion }}</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  </div>
+
+<app-footer></app-footer>
+
+</div>
+

@@ -135,7 +135,7 @@
     
     <div class="row container-fluid">
         <div class="col-12 col-md-6 col-lg-6 ">
-            <img src="assets/imagenes/secciones/team_enterprise.jpg" class="img-fluid">
+            <img src="assets/imagenes/secciones/team_enterprise.jpg" class="img-fluid border-image-principal" >
         </div>
     
         <div class="col-12 col-md-6 col-lg-6 animate__animated animate__fadeInUp">
@@ -154,11 +154,11 @@
 
         <div class="card-group mb-5 container">
 
-          <div *ngFor="let itemInfo of empresaInfoArray" class="card animate__animated animate__backInDown" style="margin: 10px; background: rgba(200,200,200,0.3); border: none;">
+          <div *ngFor="let itemInfo of empresaInfoArray" class="card border-card">
       
           <div class="card-hover" >
 
-            <img [src]="itemInfo.imagen" class="card-img-top p-2 img-fluid" style="width: 250px; height: 15vh" alt="...">
+            <img [src]="itemInfo.imagen" class="card-img-top p-2 img-fluid" style="margin: auto; display: block; width: 250px; height: 15vh" alt="...">
             <div class="card-body">
               <h5 class="title-color">{{ itemInfo.titulo }}</h5>
               <p class="card-text content" style="text-align: justify;">{{ itemInfo.descripcion }}</p>
@@ -172,29 +172,34 @@
         <div class="col-12">
           <h5 class="title-color">Nuestro Equipo</h5>
           <p class="content" style=""> {{ textNuestroEquipo }} </p>
-            <img src="assets/imagenes/equipo.jpg" class="rounded img-fluid img-team m-5 mx-auto d-block animate__animated animate__fadeInUp">
+            <img src="assets/imagenes/equipo.jpg" class="rounded img-fluid img-team m-5 mx-auto d-block">
         </div>
     
     </div>
     
     <!-- FOOTER -->
     
-        <footer class="">
-            <div class="container-footer text-center">
-              <div class="row">
-                <div class="col-2 col-md-3 col-lg-3">
-                  <img src="assets/imagenes/logoComplise.png" style="width: 50%; float: left; margin-left: 2%;" />
-                </div>
-                <div class="col-10 col-md-6 col-lg-6">
-                  <span class="text-information" style="margin-right: 2%;">
-                    &copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.
-                </span>
+    <footer class="">
+
+      <div class="container-footer text-center ">
+  
+      <div class="row container-bg-gray">
+        <div class="col-12 col-md-12 col-lg-12">
+          <img src="assets/imagenes/logo_complise.png" class="responsive-size-image">
+          <!--style="float: left; margin-left: 2%;"-->
+        </div>
+      </div>
+    
+        <div class="row " style="background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);">
+          <div class="col-12 col-md-12 col-lg-12" style="padding-bottom: 1%;">
+              <span class="text-information" style="margin-right: 3%">&copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.</span>
                 <a class="text-information" href="assets/Aviso de Confidencialidad Complise.pdf">
-                    <span class="">Aviso de privacidad</span>
+              <span class="">Aviso de privacidad</span>
                 </a>
-                </div>            
-              </div>
-            </div>
-        </footer>
+          </div>
+        </div>
+  
+      </div>
+  </footer>
         
 </div>

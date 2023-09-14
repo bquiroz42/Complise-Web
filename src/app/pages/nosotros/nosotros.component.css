@@ -20,6 +20,10 @@
 
 }
 
+/* ----------- MENU NAVBAR ------------- */
+
+/* ------------ FINAL MENU  ------------- */
+
 
 .container-bg-gray{
     background: rgba(200,200,200,0.3);
@@ -36,9 +40,9 @@
 }
 
 .container-footer{
-    background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
+    /* background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%); */
     bottom: 0;
-    padding: 0.5em 0;
+    padding: 0 0;
     position: absolute;
     width: 100%;
 }
@@ -116,7 +120,7 @@
 
 .title-color{
     background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
-    font-family: "Distortion";
+    font-family: 'Distortion Dos Analogue', sans-serif;
     font-size: calc(1vw + 1.5rem);
     font-weight: 600;
     text-transform: uppercase;
@@ -130,7 +134,7 @@
 
 .text-option-menu{
     font-size: 1.2rem;
-    font-family: 'Distortion';
+    font-family: 'Distortion Dos Analogue', sans-serif;
     color: rgb(219,0,0);
 }
 
@@ -263,7 +267,7 @@
 
 .text-option-menu{
     font-size: 1.2rem;
-    font-family: 'Distortion';
+    font-family: 'Distortion Dos Analogue', sans-serif;
     color: rgb(219,0,0);
 }
 
@@ -332,14 +336,29 @@
     right: 2%;
 }
 
+.border-image-principal{
+    margin: auto; display: block; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.border-card{
+    margin: 10px; 
+    border: none; 
+    border-radius: 20px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.responsive-size-image{
+    margin: auto; display: block;
+}
+
 /********************************************************/
 
 
 /* INYECCION DE FONT PARA TITULOS */
-@font-face {
+/* @font-face {
     font-family: Distortion;
     src: url('/assets/imgclientes/Distortion.otf');
-}
+} */
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -350,7 +369,7 @@
     
     /************ IMAGE LOGO COMPLISE **************/
 
-    .image-logo-mobile{ width: 40%; }
+    .image-logo-mobile{ width: 20%; }
     
     .container-menu-logo-mobile{ display: flex; margin: 1%; }
     
@@ -403,12 +422,17 @@
     .list-group-menu{ list-style: none; }
 
     .image-responsive-bg{ min-height: 30vh; max-height: 50vh; }
-    
-    .carousel-cation{ margin-bottom: 20%; }
 
     .margin-icon{ margin-left: 3%; }
 
     /*****************************************************/
+   .border-image-principal{
+    margin-bottom: 30px;
+   }
+
+   .responsive-size-image{
+      width: 25%;
+   }
 
 
     /************   FOOTER **************/
@@ -466,29 +490,6 @@
         margin: auto;
         display: block;
     }
-    
-    /* MENU OPTIONS */
-
-    /* .container-info{ 
-        min-width: 28vw;
-        max-width: 32vw;
-    }
-
-    .icon-contact{ width: 20px; }
-    
-    .phone-number{
-        font-family: 'Roboto';
-        padding-right: 10px;
-        font-size: 10px;
-        font-weight: 700;
-    }
-    .searchbar{
-        border-radius: 10px;
-        margin-right: 10px;
-        width: 200px;
-    } */
-
-    /* MENU PRUEBA */
 
     /* MENU OPTIONS */
 
@@ -522,20 +523,6 @@
 
     /*  */
 
-    
-    .icon-facebook{ font-size: 18px; }
-    
-    .image-responsive-bg{ min-height: 84vh; max-height: 87vh; }
-    
-    /* CAROUSEL */
-    
-    .text-carousel{
-        color: white;
-        font-size: calc(1vw + 1rem);
-    }
-    
-    .carousel-caption-mobile{ opacity: 0; }
-
     .line-title{ width: 20%; }
 
     .img-cliente{ height: 20vh; width: 150px; }
@@ -543,10 +530,6 @@
     .container-icon-menu{ display: none; }
 
     .menu-show{ display: block; }
-
-    .carousel-indicators{
-        bottom: 15px;
-    }
 
     .img-fluid{
         width: 30%;
@@ -562,74 +545,7 @@
 
     .menu-container{ margin: 0; display: none; }
 
-    /**************** IMAGE LOGO COMPLISE ****************/
-
-    .container-menu-logo-mobile{ display: none; }
-
-    .container-menu-logo-pc{ display: flex; }
-
-    .image-logo{
-        width: 40%;
-        margin: auto;
-        display: block;
-    }
-
-    /****************************************/
-    
-    /**************** MENU OPTIONS **************/
-
-    .container-info{  min-width: 28vw; max-width: 32vw; }
-
-    .icon-contact{ width: 20px; }
-    
-    .phone-number{
-        font-family: 'Roboto';
-        padding-right: 10px;
-        font-size: 10px;
-        font-weight: 700;
-    }
-
-    .searchbar{
-        border-radius: 10px;
-        margin-right: 10px;
-        width: 200px;
-    }
-    
-    .icon-facebook{ font-size: 18px; }
-    
-    .image-responsive-bg{ min-height: 84vh; max-height: 87vh;  }
-
-    .list-group-menu{ padding-left: 70%; }
-
-    .icon-position{ left: 97%; }
-
-    .position-options{ margin-left: 7.5%; }
-
     /**********************************************/
-    
-    /*********** CAROUSEL ***********/
-    
-    .text-carousel{ font-size: calc(1vw + 0.8rem); }
-
-    .title-carousel{ padding-left: 42%; }
-
-    .text-carousel{ padding-left: 36%; }
-    
-    .carousel-caption-mobile{ opacity: 0; }
-
-    .carousel-caption{ left: 30%; }
-
-    .carousel-indicators{ color: black; }
-
-    .line-title{ width: 20%; }
-
-    .img-cliente{ height: 20vh; width: 150px; }
-
-    .container-icon-menu{ display: none; }
-
-    .menu-show{ display: block; }
-
-    .carousel-indicators{ bottom: 15px; }
 
     .side-title{ width: 60%; }
 
@@ -638,29 +554,19 @@
         margin-right: 20px;
     }
 
-    .show-fondo{ display: block; }
-
-    .position-image{
-        top: 90px; z-index: 1; left: 90px; width: 510px;
-    }
-
-    .position-shadow{
-        top: 35px; left: 30px; width: 600px; z-index: 0
-    }
-
-    .position-image2{
-        position: absolute; top: 120px; z-index: 1; left: 145px; width: 1510px;
-    }
-
-    .position-shadow2{
-        position: absolute; top: 100px; left: 160px; width: 1470px; z-index: 0;
-    }
-
     /*****************************************************************/
+
+    .responsive-size-image{
+        width: 5%;
+    }
 
     /*************** FOOTER ***************/
 
     .logo-footer{ width: 30%; }
+
+    .container-footer{
+        position: relative;
+    }
 
     /**************************************/
 }

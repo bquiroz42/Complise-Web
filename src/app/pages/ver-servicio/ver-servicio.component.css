@@ -96,7 +96,7 @@
 
 .title-color{
     background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
-    font-family: "Distortion";
+    font-family: 'Distortion Dos Analogue', sans-serif;
     font-size: calc(1vw + 1.5rem);
     font-weight: 600;
     text-transform: uppercase;
@@ -109,7 +109,7 @@
 
 .text-option-menu{
     font-size: 1.2rem;
-    font-family: 'Distortion';
+    font-family: 'Distortion Dos Analogue', sans-serif;
     color: rgb(219,0,0);
 }
 
@@ -118,7 +118,7 @@
     height: auto;
     position: relative;
     margin-left: 54%;
-    padding-top: 8%;
+    /* padding-top: 8%; */
 }
 
 .list-group-menu{ list-style: none; }
@@ -147,11 +147,64 @@
     top: 15px;
 }
 
+.text-option-menu{
+    font-size: 1.2rem;
+    font-family: 'Distortion Dos Analogue', sans-serif;
+}
+
+.text-option-menu:hover{ border-bottom: 2px solid rgb(133,205,205); }
+
+.capa-fondo{
+    background: rgba(104, 104, 104, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+.panel-lateral-menu{
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background: rgba(90,90,90,1);
+}
+
+.container-top{
+    width: 100%; 
+    height: auto;
+    z-index: 20;
+}
+
+.container-menu-logo-pc{
+    width: 30%;
+    height: auto;
+    display: none;
+}
+
+.mostrar-lista{
+    display: none;
+    transition: all linear 1s;
+    border: 1px solid black; 
+    width: 20%;
+    position: absolute;
+}
+
+.container-icon-menu{
+    position: absolute;
+    float: right;
+    top: 2%;
+    right: 2%;
+}
+
+.menu-show{ display: none; }
+
 /* INYECCION DE FONT PARA TITULOS */
-@font-face {
+/* @font-face {
     font-family: Distortion;
     src: url('/assets/imgclientes/Distortion.otf');
-}
+} */
 
 
 @media screen and (min-width: 320px) and (max-width: 480px){
@@ -167,6 +220,68 @@
     .text-button{
         font-size: 1.2rem;
     }
+
+ /*****************************************************/
+
+ /* MENU NAVBAR */
+ .container-top{ display: none; }
+
+ .container-information{ display: none} 
+
+ /* FINAL MENU  */
+
+  /************ IMAGE LOGO COMPLISE **************/
+
+ .image-logo-mobile{ width: 20%; }
+ 
+ .container-menu-logo-mobile{ display: flex; margin: 1%; }
+  
+ .container-menu-logo-pc{ display: none; }
+
+
+ /******** INFORMATION CONTACT ***********/
+ 
+ .container-menu-options{ display: none; }
+
+ .container-icon-menu{ display: block; }
+ 
+ /*****************************************************/
+
+ .panel-lateral-menu{ width: 100%; } 
+ 
+ .list-item-menu{ font-family: 'Raleway'; display: block; margin-top: 10%; text-align: center ;}
+
+ .list-item-menu a{ color: white; }
+
+ /* .list-group-menu{ display: none} */
+
+ .menu-container{ width: 100%; }
+ 
+ .container-logo{ margin-left: 1%; }
+ 
+ .container-info{ margin-left: 1%; }
+
+ .phone-number{ font-size: 10px; }
+
+ .searchbar{ width: 30vw; font-size: 10px; height: 30px;}
+
+ .fa-facebook{ font-size: 15px; margin-right: 1%;}
+
+ .fa-phone{ font-size: 12px; }
+
+ .fa-search{ font-size: 14px;}
+ 
+ .list-group-menu{ list-style: none; }
+
+ .image-responsive-bg{ min-height: 30vh; max-height: 50vh; }
+
+ .margin-icon{ margin-left: 3%; }
+
+ /*****************************************************/
+ .responsive-size-image{
+     width: 25%;
+  }
+
 }
 @media screen and (min-width: 481px) and (max-width: 768px){
 
@@ -266,24 +381,9 @@
     }
 
 
-    /* IMAGE LOGO COMPLISE */
+    /**************** MENU OPTIONS **************/
 
-    .container-menu-logo-mobile{ display: none; }
-
-    .container-menu-logo-pc{ display: flex; }
-
-    .image-logo{
-        width: 40%;
-        margin: auto;
-        display: block;
-    }
-    
-    /* MENU OPTIONS */
-
-    .container-info{ 
-        min-width: 28vw;
-        max-width: 32vw;
-    }
+    .container-info{  min-width: 28vw; max-width: 32vw; }
 
     .icon-contact{ width: 20px; }
     
@@ -293,6 +393,7 @@
         font-size: 10px;
         font-weight: 700;
     }
+
     .searchbar{
         border-radius: 10px;
         margin-right: 10px;
@@ -301,16 +402,15 @@
     
     .icon-facebook{ font-size: 18px; }
     
-    .image-responsive-bg{ min-height: 84vh; max-height: 87vh; }
+    .image-responsive-bg{ min-height: 84vh; max-height: 87vh;  }
+
+    .list-group-menu{ padding-left: 70%; }
     
-    /* CAROUSEL */
-    
-    .text-carousel{
-        color: white;
-        font-size: calc(1vw + 1rem);
-    }
-    
-    .carousel-caption-mobile{ opacity: 0; }
+    .icon-position{ left: 97%; }
+
+    .position-options{ margin-left: 7.5%; }
+
+    /**********************************************/
 
     .line-title{ width: 20%; }
 
@@ -320,7 +420,38 @@
 
     .menu-show{ display: block; }
 
-    .carousel-indicators{
-        bottom: 15px;
-    }
+    .card-img-top{ width: 100%; height: 300px; }
+
+    .side-title{ width: 60%; }
+
+    /* IMAGE LOGO COMPLISE */
+
+    .container-menu-logo-mobile{ display: none; }
+
+    .container-menu-logo-pc{ display: flex; }
+
+    .image-logo{ width: 40%; margin: auto; display: block; }
+
+    .container-information{ display: flex; background: white; border-bottom: 1px solid rgba(0,0,0,0.2); }
+
+    .img-fluid{ width: 30%; display: block; margin: auto; }
+
+    /******************************************************************************************************************/
+
+    .size-control{ display: flex; }
+
+    .menu-container{ margin: 0; display: none; }
+
+    /****************************************/
+
+    /* .card-text{ margin-left: 20px; margin-right: 20px; } */
+
+    /*****************************************************************/
+
+    /*************** FOOTER ***************/
+
+    .logo-footer{ width: 30%; }
+
+    /**************************************/
+
 }

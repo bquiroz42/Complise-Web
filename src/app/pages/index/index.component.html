@@ -79,7 +79,7 @@
   <div *ngIf="mostrarMenu === true" class="capa-fondo animate__animated animate__fadeIn">
     <div class="panel-lateral-menu">
       <div class="" (click)="cerrarMenu()">
-        <i class="fa fa-solid fa-xmark" style="color: white; margin:10%; font-size: 2rem;"></i>
+        <i class="fa fa-solid fa-xmark" style="color: white; margin-top: 10%; margin-left: 10%; margin-right: 15px; font-size: 1.2rem;"></i><span style="font-size: 20px; color: white">CERRAR</span>
       </div>
       <ul class="list-group-menu" style="padding: 0px">
         <li class="list-item-menu" *ngFor="let pagina of paginasArray">
@@ -122,9 +122,9 @@
 
      <div class="carousel-item active" data-bs-interval="50000">
 
-        <img [src]="fondo1" class="image-responsive-bg show-fondo" alt="imagenSistemas">
+        <img [src]="fondo1" class="image-responsive-bg" alt="imagenSistemas">
         <!-- fondo-mobile -->
-        <img [src]="fondo1_mobile" class="image-responsive-bg show-fondo-mobile" alt="imagenSistemas">
+        <!-- <img [src]="fondo1_mobile" class="image-responsive-bg show-fondo-mobile" alt="imagenSistemas"> -->
 
         <img [src]="imagenes1" class="animate__animated animate__slideInLeft animate__slow position-image show-image" alt="imagenSistemas">
         <img [src]="sombra1" class="animate__animated animate__slideInLeft animate__slow position-shadow show-shadow" alt="imagenSistemas">
@@ -137,8 +137,8 @@
         <!-- VISTA MOBILE 1 -->
 
         <div class="carousel-caption-mobile floating2">
-          <p class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow animate__delay-0.5s">Desarollo de sistemas a tu medida</p>
-          <p class="text-carousel-mobile animate__animated animate__fadeInUp animate__slow animate__delay-0.5s">Creamos soluciones electronicas para tu negocio en base a tus necesidades</p>
+          <span class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow">Soluciones Informaticas a la medida</span>
+          <p class="text-carousel-mobile animate__animated animate__fadeInUp animate__slow">Creamos soluciones electronicas para tu negocio en base a tus necesidades</p>
         </div>
       </div>
 
@@ -153,13 +153,13 @@
 
         <div class="carousel-caption2 d-none d-md-block floating2">
           <span class="title-carousel animate__animated animate__slow animate__zoomInDown animate__delay-0.5s">Soporte tecnico</span>
-          <p class="text-carousel animate__animated animate__fadeInUp animate__slow animate__delay-0.5s">Contamos con servicio de asesoría, reparación de computo e infraestructura</p>
+          <p class="text-carousel animate__animated animate__fadeInUp animate__slow animate__delay-0.5s">Contamos con servicio de asesoría, reparación de equipo de computo e infraestructura</p>
         </div>
 
         <!-- VISTA MOBILE 2 -->
         <div class="carousel-caption-mobile floating2">
-          <span class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow animate__delay-0.5s">Soporte tecnico</span>
-          <p class="text-carousel-mobile animate__animated animate__fadeInUp animate__slow animate__delay-0.5s">Contamos con servicio de asesoría, reparación de computo e infraestructura</p>
+          <span class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow">Soporte tecnico</span>
+          <p class="text-carousel-mobile animate__animated animate__fadeInUp animate__slow">Contamos con servicio de asesoría, reparación de equipo de computo e infraestructura</p>
         </div>
 
       </div>
@@ -170,18 +170,18 @@
         <!-- <img [src]="bgImg3" class="d-block image-responsive-bg" alt="imagenVentas"> -->
 
         <img [src]="fondo3" class="d-block image-responsive-bg" alt="imagenSistemas">
-        <img [src]="imagenes3" class="animate__animated animate__slideInRight animate__slow" style="position: absolute; top: 65px; z-index: 1; left: 1305px; width: 510px;" alt="imagenSistemas"> 
-        <img [src]="sombra3" class="animate__animated animate__slideInRight animate__slow" style="position: absolute; top: 10px; left: 1280px; width: 600px; z-index: 0;" alt="imagenSistemas">
+        <img [src]="imagenes3" class="animate__animated animate__slideInRight animate__slow position-image3 show-image" alt="imagenSistemas"> 
+        <img [src]="sombra3" class="animate__animated animate__slideInRight animate__slow position-shadow3 show-shadow" alt="imagenSistemas">
         
         <div class="carousel-caption3 d-none d-md-block floating2">  
-          <h2 class="title-carousel animate__animated animate__zoomInDown animate__slow animate__delay-0.5s" style="text-align: start; padding-left: 45%;">Venta de equipo de computo</h2>
+          <span class="title-carousel animate__animated animate__zoomInDown animate__slow animate__delay-0.5s" style="text-align: start; padding-left: 45%;">Venta de equipo de computo</span>
           <p class="text-carousel animate__animated animate__fadeInUp animate__slow animate__delay-0.5s" style="padding-left: 45%;">Contamos con el equipo y accesorios que tu necesitas</p>
         </div>
 
         <!-- VISTA MOBILE 3-->
 
         <div class="carousel-caption-mobile floating2">
-          <p class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow">Venta de equipo de computo</p>
+          <span class="title-carousel-mobile animate__animated animate__zoomInDown animate__slow">Venta de equipo de computo</span>
           <p class="text-carousel-mobile animate__animated animate__fadeInUp animate__slow">Contamos con el equipo y accesorios que tu necesitas</p>
         </div>
 
@@ -202,7 +202,7 @@
 
     <div style="display: relative">
       <div [ngClass]="itemServicio.animacion">
-        <img [src]="itemServicio.imagen" class="card-img-top" style="margin-left: 10px;" alt="...">
+        <img [src]="itemServicio.imagen" class="card-img-top margin-space" alt="...">
       </div>
       <div class="card-body">
         <p class="card-text content">{{ itemServicio.descripcion }}</p>
@@ -299,7 +299,7 @@
       <h2 class="title-color">NUESTROS CLIENTES</h2>    
   </div>
 
-<div class="row container-fluid" style="width: 80%; margin-right: 10%; margin-left: 10%; margin-top: 2%; margin-bottom: 2%;">
+<div class="row container-fluid img-size-cliente">
 
     <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3" *ngFor="let itemCliente of clienteArray">
       <img [src]="itemCliente.imagen" class="img-fluid mx-auto d-block img-cliente">
@@ -318,34 +318,44 @@
 <app-contact></app-contact>
 </div>
 
-<div class="row" style="background: rgba(200,200,200,0.4)">
+<div class="row" style="background: rgba(200,200,200,0.4); margin: 0px !important;">
 
-  <!-- SECCION CONTACTO -->
-  <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-    <app-contacto-formulario></app-contacto-formulario>
-  </div>
-
+  
   <!-- SECCION UBICACION -->
-  <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
+  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
     <app-map></app-map>
+  </div>
+  
+  <!-- SECCION CONTACTO -->
+  <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+    <div class="" style="background-color: rgba(200,200,200,0.4); border: 3px solid rgba(200,200,200,0.7); border-radius: 20px;">
+      <app-contacto-formulario></app-contacto-formulario>
+    </div>
   </div>
 
 </div>
 
 <!-- FOOTER -->
 <footer class="">
-  <div class="container-footer text-center">
-    <div class="row">
-          <div class="col-2 col-md-3 col-lg-3">
-            <img src="assets/imagenes/logoComplise.png" class="logo-footer" />
-          </div>
-          <div class="col-9 col-md-7 col-lg-6">
-              <span class="text-information" style="margin-right: 2%;"> &copy; Complise Sistemas S.A de C.V. Todos los derechos reservados. </span>
-              <a class="text-information" href="assets/Aviso de Confidencialidad Complise.pdf">
-                <span class="">Aviso de privacidad</span>
-              </a>
-        </div>
+
+  <div class="container-footer text-center ">
+
+  <div class="row container-bg-gray">
+    <div class="col-12 col-md-12 col-lg-12">
+      <img src="assets/imagenes/logo_complise.png" class="responsive-size-image">
+      <!--style="float: left; margin-left: 2%;"-->
     </div>
+  </div>
+
+    <div class="row " style="background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);">
+      <div class="col-12 col-md-12 col-lg-12" style="padding-bottom: 1%;">
+          <span class="text-information" style="margin-right: 3%">&copy; Complise Sistemas S.A de C.V. Todos los derechos reservados.</span>
+            <a class="text-information" href="assets/Aviso de Confidencialidad Complise.pdf">
+          <span class="">Aviso de privacidad</span>
+            </a>
+      </div>
+    </div>
+
   </div>
 </footer>
 

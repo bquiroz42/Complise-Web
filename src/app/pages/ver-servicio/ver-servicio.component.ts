@@ -15,9 +15,7 @@ export class VerServicioComponent implements OnInit {
     { nombre: 'Contacto', ruta: '/contacto'}
   ]
 
-
-  
-
+  mostrarMenu: boolean = false;
 
   // ARRAY TEMPORALMENTE CREADO PARA MOSTRAR LOS SERVICIOS
   // serviciosArray = [
@@ -35,7 +33,7 @@ export class VerServicioComponent implements OnInit {
   textoProductoSia2k = 'Con ME2K - Sistema de Control de Expedientes Electronico, encargado de administrar y gestionar los registros de los pacientes de un hospital, facturación y registro del expediente clinico del paciente, entre otros...';
   textoProductoLab2k = 'Con ME2K - Sistema de Control de Expedientes Electronico, encargado de administrar y gestionar los registros de los pacientes de un hospital, facturación y registro del expediente clinico del paciente, entre otros...';
 
-  imagenLogo = 'assets/imagenes/logoComplise.png';
+  imagenLogo = 'assets/imagenes/logo_complise.png';
   iconoTelefono = 'assets/imagenes/num-contacto 1.png';
   iconoFacebook = 'assets/imagenes/icono-facebook 1.png';
 
@@ -67,6 +65,8 @@ export class VerServicioComponent implements OnInit {
   id: number;
 
   ngOnInit(): void {
+
+    window.scrollTo(0,0);
 
     const body = document.querySelector('body');
 
@@ -107,6 +107,61 @@ export class VerServicioComponent implements OnInit {
 
     })
 
+    // window.scrollTo(0,0);
+    
+    // LOGICA PARA MANIPULAR LA CANTIDAD DE PIXELES DE LA PANTALLA AL HACER SCROLL
+
+    let fixedMenu = 20;
+
+    let containerTop = document.getElementById("containerTop");
+
+    let carousel = document.getElementById("carousel");
+
+    let containerBottom = document.getElementById("containerBottom")
+    let logo = document.getElementById("logo")
+
+    window.onscroll = function(){
+      let scrollY = window.scrollY;
+
+      // MOSTRAR MENU FIXED
+      if(scrollY >= fixedMenu){
+
+        
+        
+        containerTop.style.marginTop = '-8px';
+        containerTop.style.position = 'fixed';
+        
+        containerTop.style.transition = 'all linear 0.2s';
+        containerTop.style.transform = 'scaleY(0.90)';
+        
+        // containerTop.style.animationDelay = '2s';
+        // carousel.style.paddingTop = '3%';
+        
+        logo.style.transform = 'scaleY(0.85)';
+
+        // containerBottom.style.transition = 'all linear 0.1s';
+        // containerBottom.style.marginTop = '-8px';
+        // containerBottom.style.transform = 'scaleY(0.85)';
+        
+      }
+
+      // MOSTRAR MENU RELATIVE
+      if(scrollY <= fixedMenu){
+
+        containerTop.style.animation = '';
+        containerTop.style.position = 'relative';
+
+        containerTop.style.transition = 'all linear 0.2s'
+        // carousel.style.paddingTop = '0%';
+
+        containerTop.style.marginTop = '0px';
+        containerTop.style.transform = 'scaleY(1)';
+
+        logo.style.transform = 'scaleY(1)';
+      }
+
+     }
+
 
     // let obtenerServicio = localStorage.getItem('servicio');
     
@@ -123,5 +178,16 @@ export class VerServicioComponent implements OnInit {
     // })
 
   }
+
+   // MENU DESPLEGABLE EN MOVILES
+   activarMenu(){
+    this.mostrarMenu = true;
+    console.log('Menu activado');
+  }
+
+  cerrarMenu(){
+    this.mostrarMenu = false;
+  }
+
 
 }

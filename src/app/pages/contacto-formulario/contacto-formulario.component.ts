@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto-formulario',
@@ -8,39 +8,18 @@ import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms
 })
 export class ContactoFormularioComponent implements OnInit {
 
-  contactForm: UntypedFormGroup;
+  contactForm: FormGroup;
   mostrarMensaje: boolean;
+  mensajeExito = document.getElementById("mensajeExito");
   // mensajeVar;
 
-  constructor( private fb: UntypedFormBuilder) { }
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.contactForm = this.initForm();
   }
 
-
-  onSubmit(datosUsuario: any){
-    console.log('Form enviado->')
-    console.log(this.contactForm.value);
-
-    if(this.contactForm.valid){
-
-      this.mostrarMensaje = true;
-
-      setTimeout(() => {
-
-        this.mostrarMensaje = false;
-      }, 3000);
-
-
-    }else if(this.contactForm.invalid){
-
-      this.mostrarMensaje = false;
-    }
-
-  }
-
-  initForm(): UntypedFormGroup{
+  initForm(): FormGroup{
     return this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       apellido: ['', [Validators.required, Validators.minLength(3)]],
@@ -51,5 +30,29 @@ export class ContactoFormularioComponent implements OnInit {
     })
   }
 
+  onSubmit(datosUsuario: any){
+
+    if(this.contactForm.valid){
+
+      console.log('Form enviado->')
+      console.log(this.contactForm.value);
+
+      this.mostrarMensaje = true;
+
+      setTimeout(() => {
+
+      this.mostrarMensaje = false;
+      this.contactForm.reset();
+      }, 2000);
+
+
+    }else if(this.contactForm.invalid){
+
+      this.mostrarMensaje = false;
+      console.log('Form vacio->')
+      // console.log(this.contactForm.value);
+    }
+
+  }
 
 }

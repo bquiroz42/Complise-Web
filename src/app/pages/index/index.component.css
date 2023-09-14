@@ -14,6 +14,9 @@
 .position-image2{ position: absolute; }
 .position-shadow2{ position: absolute; }
 
+.position-image3{ position: absolute; }
+.position-shadow3{ position: absolute; }
+
 
 .content { white-space: pre-line; }
 
@@ -84,7 +87,7 @@
 
 .text-option-menu{
     font-size: 1.2rem;
-    font-family: 'Distortion';
+    font-family: 'Distortion Dos Analogue', sans-serif;
     color: rgb(219,0,0);
 }
 
@@ -148,7 +151,7 @@
 /* CAROUSEL */
 .title-carousel{ 
     background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
-    font-family: "Distortion";
+    font-family: 'Distortion Dos Analogue', sans-serif;
     font-size: calc(1vw + 2rem);
     font-weight: 600;
     text-transform: uppercase;
@@ -288,7 +291,7 @@
 
 .title-color{
     background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
-    font-family: "Distortion";
+    font-family: 'Distortion Dos Analogue', sans-serif;
     font-size: calc(1vw + 1.5rem);
     font-weight: 600;
     text-transform: uppercase;
@@ -319,9 +322,9 @@
 /* FOOTER SECTION */
 
 .container-footer{
-    background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
+    /* background: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%); */
     bottom: 0;
-    padding: 0.5em 0;
+    padding: 0 0;
     position: relative;
     width: 100%;
 }
@@ -378,10 +381,10 @@
 /*  */
 
 /* INYECCION DE FONT PARA TITULOS */
-@font-face {
+/* @font-face {
     font-family: Distortion;
     src: url('/assets/imgclientes/Distortion.otf');
-}
+} */
 
 /************* CLASS MOBILE ***************/
 
@@ -436,7 +439,7 @@
 
 .title-carousel-mobile{
     background-image: linear-gradient(90deg, rgb(219,0,0) 30%, rgb(136, 0, 0) 80%);
-    font-family: "Distortion";
+    font-family: 'Distortion Dos Analogue', sans-serif;
     font-size: calc(1vw + 1rem);
     font-weight: 600;
     text-transform: uppercase;
@@ -454,6 +457,20 @@
     font-size: 12px;
 }
 
+.container-bg-gray{
+    background: rgba(200,200,200,0.3);
+}
+
+.responsive-size-image{
+    margin: auto; display: block;
+}
+
+.margin-space{ margin-left: 15px; }
+
+.img-size-cliente{
+    width: 100%;
+}
+
 /* MOBILE DEVICES */
 @media screen and (min-width: 320px) and (max-width: 480px){
 
@@ -467,7 +484,7 @@
     
     /************ IMAGE LOGO COMPLISE **************/
 
-    .image-logo-mobile{ width: 40%; }
+    .image-logo-mobile{ width: 20%; }
     
     .container-menu-logo-mobile{ display: flex; margin: 1%; }
     
@@ -491,17 +508,21 @@
 
     .show-fondo-mobile{ display: block; }
 
-    .position-image{ top: 45px; z-index: 1; left: 25px; width: 115px; }
+    .position-image{ display: none; }
 
-    .position-shadow{ top: 30px; left: 10px; width: 140px; z-index: 0; }
+    .position-shadow{ display: none; }
     
-    .position-image2{ top: 45px; z-index: 1; left: 25px; width: 115px; }
+    .position-image2{ display: none; }
 
-    .position-shadow2{ top: 30px; left: 10px; width: 140px; z-index: 0; }
+    .position-shadow2{ display: none; }
 
-    .show-image{ display: none; }
+    .position-image3{ display: none; }
+
+    .position-shadow3{ display: none; }
 
     .show-shadow{ display: none; }
+
+    .title-carousel-mobile{ font-size: calc(1vw + 1.5rem); }
 
     /***************************************************/
 
@@ -541,9 +562,17 @@
 
     /********** CONTENIDO ***********/
     
-    .card-img-top{ height: 25vh; }
+    .card-img-top{ height: 20vh; width: 20vh; display: block; margin: auto; }
 
-    .card-text{ font-size: calc(1vw + 0.6rem); }
+    .floating{ margin-left: 0px; }
+
+    .floating2{ margin-left: 0px; }
+
+    .floating3{ margin-left: 0px;}  
+
+    .card-text{ font-size: calc(1vw + 0.5rem); }
+
+    .container-section-title{ height: 20px; }
 
     .title-information-product{ font-size: calc(1vw + 0.9rem); }
 
@@ -557,6 +586,12 @@
 
     /******************************************/
     
+    .responsive-size-image{ width: 25%;}
+
+    .row{ margin: 0px !important; margin-left: 0px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; }
+
+    .text-information{ font-size: 12px; }
+
     /*********** FOOTER ***********/
 
     .logo-footer{ width: 100%; }
@@ -576,7 +611,7 @@
 
     /*********** IMAGE LOGO COMPLISE *********/
 
-    .image-logo-mobile{ width: 30%; }
+    .image-logo-mobile{ width: 20%; }
 
     .container-menu-logo-mobile{ display: flex; margin-bottom: 2%; margin-left: 2%; }
 
@@ -626,7 +661,7 @@
 
     .fa-bars{ font-size: 2rem; }
 
-    .image-responsive-bg{ height: 50vh; }
+    .image-responsive-bg{ height: 30vh; }
 
     .line-title{ width: 40%; }
 
@@ -639,6 +674,12 @@
     .side-title{ width: 30%; }
 
     /****************************************************/
+
+    .responsive-size-image{ width: 20%; }
+
+    .title-carousel{ display: none; }
+
+    .text-carousel{ display: none; }
 
 }
 
@@ -797,7 +838,7 @@
     
     .icon-facebook{ font-size: 18px; }
     
-    .image-responsive-bg{ min-height: 78vh; max-height: 80vh;  }
+    .image-responsive-bg{ min-height: 80vh; max-height: 85vh;  }
 
     .list-group-menu{ padding-left: 70%; }
 
@@ -840,28 +881,38 @@
 
     .show-fondo{ display: block; }
 
-    .position-image{
-        top: 50px; z-index: 1; left: 90px; width: 510px;
-    }
+    .position-image{ top: 50px; z-index: 1; left: 90px; width: 510px; }
 
-    .position-shadow{
-        top: -5px; left: 35px; width: 600px; z-index: 0
-    }
+    .position-shadow{ top: -5px; left: 35px; width: 600px; z-index: 0 }
 
-    .position-image2{
-        position: absolute; top: 120px; z-index: 1; left: 145px; width: 1510px;
-    }
+    .position-image2{ position: absolute; top: 120px; z-index: 1; left: 250px; width: 1380px; }
 
-    .position-shadow2{
-        position: absolute; top: 100px; left: 160px; width: 1470px; z-index: 0;
-    }
+    .position-shadow2{ position: absolute; top: 115px; left: 270px; width: 1340px; z-index: 0; }
+
+    .position-image3{ position: absolute; top: 50px; z-index: 1; left: 1300px; width: 465px; }
+
+    .position-shadow3{ position: absolute; top: 5px; left: 1270px; width: 550px; z-index: 0; }
 
     /*****************************************************************/
+
+    .responsive-size-image{
+        width: 5%;
+    }
+
+    .carousel-caption2{
+        top: 35%;
+    }
 
     /*************** FOOTER ***************/
 
     .logo-footer{ width: 30%; }
 
     /**************************************/
+
+    .margin-space{
+        margin-left: 10px;
+    }
+
+    .img-size-cliente{ width: 80%; margin-right: 10%; margin-left: 10%; margin-top: 2%; margin-bottom: 2%}
 
 }

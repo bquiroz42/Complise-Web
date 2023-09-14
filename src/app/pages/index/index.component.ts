@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class IndexComponent implements OnInit {
 
-  imagenLogo = 'assets/imagenes/logoComplise.png';
+  imagenLogo = 'assets/imagenes/logo_complise.png';
   iconoTelefono = 'assets/imagenes/num-contacto 1.png';
   iconoFacebook = 'assets/imagenes/icono-facebook 1.png';
 
@@ -171,14 +171,15 @@ export class IndexComponent implements OnInit {
 
       // MOSTRAR MENU FIXED
       if(scrollY >= fixedMenu){
-
+        
+        containerTop.style.marginTop = '-8px';
+        containerTop.style.transform = 'scaleY(0.90)';
+        
         containerTop.style.position = 'fixed';
 
         containerTop.style.transition = 'all linear 0.2s';
         carousel.style.paddingTop = '3%';
         
-        containerTop.style.marginTop = '-8px';
-        containerTop.style.transform = 'scaleY(0.90)';
 
         // containerTop.style.animationDelay = '2s';
 
@@ -239,8 +240,11 @@ export class IndexComponent implements OnInit {
     menuContainer.style.display = 'none';
     body.style.position = 'fixed';
     
+
+    // document.getElementsByTagName("html")[0].style.overflow = "hidden";
+    // document.getElementsByTagName("html")[0].style.overflow = "auto"
     
-    
+    body.style.overflow = 'hidden'
 
   }
 
@@ -252,7 +256,6 @@ export class IndexComponent implements OnInit {
 
     menuContainer.style.display = 'block';
     body.style.position = 'unset';
-
 
 }
 

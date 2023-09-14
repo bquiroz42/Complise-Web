@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ServiciosComponent implements OnInit {
 
+  mostrarMenu: boolean = false;
+
   // serviciosArray = [
   //   { nombre: 'Desarrollo de Software a la medida', descripcion: 'Desarrollo de sistemas adaptables para empresas y clientes.', imagen: 'assets/imagenes/img12.jpg' , id: 1 },
   //   { nombre: 'Reparación de equipo', descripcion: 'Reparacion de Equipo de Computo y otros aparatos electronicos.', imagen: 'assets/imagenes/img13.jpg' , id: 2 },
@@ -32,7 +34,7 @@ export class ServiciosComponent implements OnInit {
     { nombre: 'Contacto', ruta: '/contacto'}
   ]
   
-  imagenLogo = 'assets/imagenes/logoComplise.png';
+  imagenLogo = 'assets/imagenes/logo_complise.png';
   iconoTelefono = 'assets/imagenes/num-contacto 1.png';
   iconoFacebook = 'assets/imagenes/icono-facebook 1.png';
   
@@ -40,6 +42,68 @@ export class ServiciosComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0,0);
+    // body.style.position = 'unset'
+
+    const body = document.querySelector('body');
+
+    body.style.position = 'unset';
+
+    // window.scrollTo(0,0);
+    
+    // LOGICA PARA MANIPULAR LA CANTIDAD DE PIXELES DE LA PANTALLA AL HACER SCROLL
+
+    let fixedMenu = 20;
+
+    let containerTop = document.getElementById("containerTop");
+
+    let carousel = document.getElementById("carousel");
+
+    let containerBottom = document.getElementById("containerBottom")
+    let logo = document.getElementById("logo")
+
+    window.onscroll = function(){
+      let scrollY = window.scrollY;
+
+      // MOSTRAR MENU FIXED
+      if(scrollY >= fixedMenu){
+
+        
+        
+        containerTop.style.marginTop = '-8px';
+        containerTop.style.position = 'fixed';
+        
+        containerTop.style.transition = 'all linear 0.2s';
+        containerTop.style.transform = 'scaleY(0.90)';
+        
+        // containerTop.style.animationDelay = '2s';
+        // carousel.style.paddingTop = '3%';
+        
+        logo.style.transform = 'scaleY(0.85)';
+
+        // containerBottom.style.transition = 'all linear 0.1s';
+        // containerBottom.style.marginTop = '-8px';
+        // containerBottom.style.transform = 'scaleY(0.85)';
+        
+      }
+
+      // MOSTRAR MENU RELATIVE
+      if(scrollY <= fixedMenu){
+
+        containerTop.style.animation = '';
+        containerTop.style.position = 'relative';
+
+        containerTop.style.transition = 'all linear 0.2s'
+        // carousel.style.paddingTop = '0%';
+
+        containerTop.style.marginTop = '0px';
+        containerTop.style.transform = 'scaleY(1)';
+
+        logo.style.transform = 'scaleY(1)';
+      }
+
+     }
+
+
   }
 
   verServicio(id){
@@ -47,6 +111,16 @@ export class ServiciosComponent implements OnInit {
 
     // PARA MANDAR AL USUARIO CON EL ID DEL SERVICIO A LA PAGINA DE SERVICIOS(POR ID)
     this.router.navigate(['/servicios/:' + id]);
+  }
+
+  // MENU DESPLEGABLE EN MOVILES
+  activarMenu(){
+    this.mostrarMenu = true;
+    console.log('Menu activado');
+  }
+
+  cerrarMenu(){
+    this.mostrarMenu = false;
   }
 
 }

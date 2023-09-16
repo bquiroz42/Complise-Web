@@ -78,9 +78,9 @@ Si buscas una solución informática que se adapte a tu presupuesto, a tu tiempo
   textNuestroEquipo = 'Los pilares de la empresa es nuestro personal, por lo que, en Complise Sistemas encontrarás a los mejores profesionales del sector de la informática, con amplia experiencia y formación en desarrollo de software, soporte técnico, venta y renta de equipo de computo.\n \nSomos una empresa comprometida con la calidad, la innovación y la satisfacción de nuestros clientes.\n \nOfrecemos soluciones a medida, adaptadas a las necesidades y objetivos de cada proyecto.\n \nNos apasiona lo que hacemos y nos esforzamos por superar las expectativas de quienes confían en nosotros.\n \nSi buscas un servicio integral, eficiente y personalizado, ¡somos tu mejor opción!';
 
   empresaInfoArray = [
-    { titulo: 'Mision', imagen: '/assets/imagenes/secciones/objetos - svg/earth.png', descripcion: this.textMision}, 
-    { titulo: 'Vision', imagen: '/assets/imagenes/secciones/objetos - svg/eye.png', descripcion: 'Ser la mejor opción en sistemas, con la atención fija en lo más avanzado, buscando el mejor balance entre costo y funcionalidad, integrando la máxima calidad al menor precio. (Nuestros clientes no cuestionan posibilidad ni precio, están seguros de recibir lo mejor disponible al menor costo).' }, 
-    { titulo: 'Valores', imagen: '/assets/imagenes/secciones/objetos - svg/hand.png', descripcion: this.textNuestrosValores }, 
+    { titulo: 'Mision', imagen: 'assets/imagenes/secciones/earth.png', descripcion: this.textMision}, 
+    { titulo: 'Vision', imagen: 'assets/imagenes/secciones/eye.png', descripcion: 'Ser la mejor opción en sistemas, con la atención fija en lo más avanzado, buscando el mejor balance entre costo y funcionalidad, integrando la máxima calidad al menor precio. (Nuestros clientes no cuestionan posibilidad ni precio, están seguros de recibir lo mejor disponible al menor costo).' }, 
+    { titulo: 'Valores', imagen: 'assets/imagenes/secciones/hand.png', descripcion: this.textNuestrosValores }, 
     // { titulo: 'Nuestro Equipo', imagen: '/assets/imagenes/secciones/hand.png', descripcion: 'Estamos conformados por personas comprometidas y altamente capacitadas para poder brindarle una solución ante su necesidad. Puede tener la certeza de que alguno de nuestros integrantes tendrá la respuesta ante su solicitud.'},
   ]
 

@@ -31,10 +31,9 @@
 .row{ margin: 0; }
 
 /* .carousel-caption{ margin-bottom: 10%; } */
-
-.carousel-caption1{ position: absolute; top: 25%; right: 2%; bottom: 1.25rem; left: 35%; padding-top: 1.25rem; padding-bottom: 3.25rem; color: #fff; text-align: end; }
-.carousel-caption2{ bottom: 1.25rem; position: absolute; top: 40%; z-index: 1; left: -20%; padding-top: 1.25rem; padding-bottom: 1.25rem; color: #fff; text-align: center; width: 100%; }
-.carousel-caption3{ bottom: 1.25rem; position: absolute; top: 20%; z-index: 1; left: -15%; padding-top: 1.25rem; padding-bottom: 1.25rem; color: #fff; text-align: start;}
+.carousel-caption1{ position: absolute; }
+.carousel-caption2{ position: absolute; }
+.carousel-caption3{ position: absolute; }
 
 /* CONTAINER DIVS */
 .container-contact-search{ display: flex; padding-top: 1%; }
@@ -914,5 +913,10 @@
     }
 
     .img-size-cliente{ width: 80%; margin-right: 10%; margin-left: 10%; margin-top: 2%; margin-bottom: 2%}
+
+
+    .carousel-caption1{ bottom: 1.25rem; top: 25%; right: 2%; left: 35%; padding-top: 1.25rem; padding-bottom: 3.25rem; color: #fff; text-align: end; }
+    .carousel-caption2{ bottom: 1.25rem;  top: 40%; z-index: 1; left: -20%; padding-top: 1.25rem; padding-bottom: 1.25rem; color: #fff; text-align: center; width: 100%; }
+    .carousel-caption3{ bottom: 1.25rem;  top: 20%; z-index: 1; left: -15%; padding-top: 1.25rem; padding-bottom: 1.25rem; color: #fff; text-align: start;}
 
 }
